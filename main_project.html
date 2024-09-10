@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>プロジェクト名：タートル&アドベンチャー</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">制作物一覧</a>
+                    <ul>
+                        <li><a href="project1.html">制作物1の長めのタイトル</a></li>
+                        <li><a href="project2.html">制作物2のもう少し長いタイトル</a></li>
+                        <li><a href="project3.html">制作物3の少しだけ長いタイトル</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>プロジェクト概要</h2>
+            <p>このプロジェクトは、○○○という目的で制作されました。主な特徴は○○○です。</p>
+            <h2>デモ動画</h2>
+            <video controls>
+                <source src="project1-video.mp4" type="video/mp4">
+            </video>
+            <h2>開発経緯</h2>
+            <p>このプロジェクトは、以下のような背景で開始されました…</p>
+
+            <h2>使用技術</h2>
+            <ul>
+                <li>Unity</li>
+                <li>C#</li>
+                <li>その他の技術やツール</li>
+            </ul>
+
+            <h2>開発でのチャレンジ</h2>
+            <p>このプロジェクトで直面した主なチャレンジとその解決方法について…</p>
+            <h2>デモプレイ</h2>
+           <p><a href="demo/demo.html" class="button">こちらからプレイいただけます</a></p>
+        </section>
+    </main>
+
+
+
+    <main>
+        <section class="section">
+            <!-- タブの追加 -->
+            <h2>コード紹介</h2>
+            <div class="tabs">
+                <div class="tab-link active" data-tab="tab1">プレイヤー操作</div>
+                <div class="tab-link" data-tab="tab2">敵AI</div>
+                <div class="tab-link" data-tab="tab3">様々なギミック【1】</div>
+                <div class="tab-link" data-tab="tab4">様々なギミック【2】</div>
+            </div>
+
+            <div id="tab1" class="tab-content">
+                <h3>● プレイヤーキャラクターの操作</h3>
+                    <video controls>
+                        <source src="character-movement-demo.mp4" type="video/mp4">
+                    </video>
+                    <p>このプロジェクトで最初に取り組んだのは、キャラクターの移動システムの開発です。</p>
+                    <p>このシステムは、プレイヤーが仮想ジョイスティックを使用してキャラクターをスムーズに操作できるようにするものです。</p>
+                    <p>ジャンプやダッシュといったアクションも可能にしました。</p>
+                    <div class="tech-points">
+                        <p><strong>技術的なポイント:</strong></p>
+                        <ul>
+                            <li>ジョイスティックのみで行えるアクション操作の実装</li>
+                            <li>状態遷移による行動制限</li>
+                            <li>セッター関数による行動制限</li>
+                        </ul>
+                    </div>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/kosuke-Hanchan/495ebefc5b2740320e020990b1892112.js"></script>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-content hidden">
+                <h3>● 敵AI</h3>
+                <p>敵キャラクターのAIシステムを開発しました。このシステムでは、敵キャラクターがプレイヤーの位置を感知して状態遷移を行い、追跡したり、攻撃したりする動作を実現しています。</p>
+                <div class="tech-points">
+                    <p><strong>技術的なポイント:</strong></p>
+                    <ul>
+                        <li>NavMeshを使用した経路探索の実装</li>
+                        <li>プレイヤーの動きに応じたリアクション(状態遷移)処理</li>
+                        <li>状態遷移の管理による複数の行動パターンの切り替え</li>
+                        <li>敵ごとに個体差を持たせる設定が可能</li>
+                    </ul>
+                </div>
+                <section class="script-section">
+                    <h3>敵：スケルトン</h3>
+                    <video controls>
+                        <source src="project1-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="script-about">
+                        <ul>
+                            <li>プレイヤーとの距離に応じて追跡、攻撃等の状態遷移を行う。</li>
+                            <li>視覚や最大追跡距離等は変数にて変更可能(敵ごとに個体差を持たせることができる)</li>
+                            <li>NavMesh二よりプレイヤーの追跡を行う</li>
+                        </ul>
+                    </div>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/8d78670d622d1400bcd3c5746f6dbdad.js"></script>
+                    </div>
+                </section>
+
+                <section class="script-section">
+                    <h3>敵：サボテン</h3>
+                    <video controls>
+                        <source src="project1-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="script-about">
+                        <ul>
+                            <li>プレイヤーとの距離に応じて攻撃の種類が変わる</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/35adb4099e7aca25e00be37173cfc78c.js"></script>
+                    </div>
+                </section>
+
+                <section class="script-section">
+                    <h3>敵：爆弾ガニ(ボス枠)</h3>
+                    <video controls>
+                        <source src="project1-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="script-about">
+                        <ul>
+                            <li>特定の状態でのみダメージを与えることができる</li>
+                            <li>爆弾を跳ね返して戦う</li>
+                        </ul>
+                    </div>
+                    <div class="gist-container">
+                        <script src=""></script>
+                    </div>
+                </section>
+            </div>
+
+            <div id="tab3" class="tab-content hidden">
+                <h3>● 様々なギミック【1】</h3>
+                <p>当ゲームで作成した複数ギミックを紹介いたします。</p>
+                <div class="tech-points">
+                    <p><strong>技術的なポイント:</strong></p>
+                    <ul>
+                        <li>当たり判定をトリガーとしたリアクション処理</li>
+                        <li>スイッチや鍵の種類を列挙型/フラグ型の変数を設定することで種類選択が可能(管理が容易に)</li>
+                    </ul>
+                </div>
+
+                <section class="script-section">
+                    <h3>【スイッチ】</h3>
+                    <video controls>
+                        <source src="project1-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="script-about">
+                        <ul>
+                            <li>プレイヤーによる攻撃、もしくは接触により扉オブジェクトの扉を開閉することができる（アニメーションの再生）</li>
+                            <li>スイッチには「床タイプ」と「レバータイプ」が存在しており、列挙体変数を設定することで使い分けることが可能</li>
+                            <li>フラグ変数を設定することで、一定時間で自動的にOFFとなる時限型スイッチとして使用することが可能</li>
+                        </ul>
+                    </div>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/2003535e7ad6ac134d389311681ec900.js"></script>
+                    </div>
+                </section>
+
+                <section class="script-section">
+                    <h3>【鍵付き扉】</h3>
+                    <video controls>
+                        <source src="project1-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="script-about">
+                        <ul>
+                            <li>変数設定により取得/使用する鍵の種類(通常用/ボス用)を任意に設定することが可能</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <h4>鍵の管理スクリプト</h4>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/9b316096d759d72dc9221f85281b774d.js"></script>
+                    </div>
+                    <h4><br>鍵取得スクリプト</h4>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/a01fbe3b2443299dc812c5b06a17723c.js"></script>
+                    </div>
+                    <h4><br>鍵付き扉開錠用スクリプト</h4>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/5b82d48e7db2fb2078641ace3dca8e63.js"></script>
+                    </div>
+                </section>
+            </div>
+
+            <div id="tab4" class="tab-content hidden">
+                <h3>● 様々なギミック【2】</h3>
+                <p>当ゲームで作成した複数ギミックを紹介いたします。</p>
+                <div class="tech-points">
+                    <p><strong>技術的なポイント:</strong></p>
+                    <ul>
+                        <li>当たり判定をトリガーとしたリアクション処理</li>
+                        <li>スイッチや鍵の種類を列挙型/フラグ型の変数を設定することで種類選択が可能(管理が容易に)</li>
+                    </ul>
+                </div>
+
+                <section class="script-section">
+                    <h3>【破壊可能な岩】</h3>
+                    <video controls>
+                        <source src="project1-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="script-about">
+                        <ul>
+                            <li>プレイヤーアクション「爆弾」によって破壊することができる</li>
+                            <li>「爆弾を手に入れるまで他ステージへの道を塞ぐ」などゲーム進行調整で使用予定</li>
+                        </ul>
+                    </div>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/49d0cc6ce59b40f5a78d9497dc611607.js"></script>
+                    </div>
+                </section>
+
+                <section class="script-section">
+                    <h3>【アイテム入り樽】</h3>
+                    <video controls>
+                        <source src="project1-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="script-about">
+                        <ul>
+                            <li>プレイヤーの攻撃によって破壊可能</li>
+                            <li>破壊することでアイテムが出現する</li>
+                            <li>変数設定によりアイテム出現確率を任意に設定することが可能(オブジェクトごとに設定可能)</li>
+                            <li>変数設定により出現アイテムを任意に設定することが可能</li>
+                        </ul>
+                    </div>
+                    <div class="gist-container">
+                        <script src="https://gist.github.com/kosuke-Hanchan/235223b9c8197e655ae14f1cf5d4645a.js"></script>
+                    </div>
+                </section>
+            </div>
+
+            <h2>GitHubリンク</h2>
+            <p>当ゲームにて作成したその他コードを以下のリンクにまとめております。</p>
+            <p> 閲覧のほどよろしくお願いいたします。</p>
+            <p><a href="https://github.com/kosuke-Hanchan/seisakubutu_script.git" class="button">GitHubへ</a></p>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script>
+        document.querySelectorAll('.tab-link').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.getAttribute('data-tab');
+
+                document.querySelectorAll('.tab-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                this.classList.add('active');
+                document.getElementById(target).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

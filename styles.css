@@ -5,41 +5,87 @@
     box-sizing: border-box;
 }
 
+
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
 }
+
+
 
 header {
     background-color: #2c3e50;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     margin-bottom: 40px;
 }
-
 header h1 {
     font-size: 2.5em;
     margin: 0;
+    margin-top: 20px;
 }
+
 
 nav ul {
     list-style: none;
-    margin-top: 10px;
+    padding: 0;
+    margin: 0;
 }
-
 nav ul li {
-    display: inline;
+    display: inline-block;
+    position: relative;
     margin-right: 15px;
 }
-
 nav ul li a {
     color: #fff;
+    background-color: #3a5166;
     text-decoration: none;
     font-size: 1.2em;
+    padding: 10px 20px;
+    display: block;
+}
+nav ul li a:hover {
+    background-color: #555;
+}
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    min-width: 200px;
+    border-radius: 0 0 5px 5px;
+    z-index: 1000;
+    white-space: nowrap;
+    text-align: left; /* 小項目を左詰めにする */
+}
+nav ul li ul li {
+    display: block;
+    width: 100%;
+}
+nav ul li ul li a {
+    padding: 10px 20px;
+}
+nav ul li:hover > ul {
+    display: block;
 }
 
 .about-me, .featured-project, .projects-list {
@@ -72,6 +118,18 @@ img {
     margin-bottom: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #555;
+}
 
 a.button {
     display: inline-block;
@@ -90,11 +148,51 @@ a.button:hover {
 
 footer {
     text-align: center;
-    margin-top: 40px;
+    padding: 20px;
+    margin-top: 20px;
     padding: 20px 0;
     background-color: #2c3e50;
     color: #fff;
 }
+
+
+
+.section {
+    padding: 20px;
+}
+.section h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #333; /* アンダーバーを追加 */
+    padding-bottom: 10px; /* アンダーバーとテキストの間隔を調整 */
+    margin-top: 20px;
+}
+.tech-points ul {
+    list-style: none;
+    padding: 0;
+}
+.tech-points ul li {
+    background-color: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.script-about ul{
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.script-section{
+    margin-top: 40px;
+}
+.script-section h3{
+    border-bottom: 2px solid #333; /* アンダーバーを追加 */
+    margin-bottom: 10px;
+}
+
+
 
 .project-item {
     margin-bottom: 40px; /* 制作物間に40pxの余白を追加 */
@@ -104,7 +202,7 @@ video {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -119,7 +217,79 @@ code {
     font-family: "Courier New", Courier, monospace;
     color: #333;
 }
+/* タブのスタイル */
+.tabs {
+    display: flex;
+    cursor: pointer;
+    border-bottom: 2px solid #ccc;
+}
+.tabs div {
+    padding: 12px 24px;
+    background-color: #f1f1f1;
+    border: 2px solid #ddd;
+    border-bottom: none;
+    margin-right: -1px;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+}
+.tabs div:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tabs div.active {
+    background-color: #2c3e50;
+    border-top: 3px solid #333;
+    border-color: #333;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    position: relative;
+}
 
+/* タブのコンテンツ */
+.tab-content {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.tab-content.hidden {
+    display: none;
+}
+
+
+/* コードのスタイル */
+.gist-container {
+    max-height: 400px; /* 表示範囲の高さを指定します */
+    overflow-y: auto; /* 垂直方向にスクロールを許可します */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+/* 箇条書きのスタイル調整 */
+.tech-points {
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-left: 4px solid #333;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.tech-points ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+.tech-points li {
+    margin-bottom: 8px;
+}
 @media (max-width: 768px) {
     body {
         padding: 0 10px;
