@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 0;
+            min-width: 200px;
+            border-radius: 0 0 5px 5px;
+            z-index: 1000;
+            white-space: nowrap;
+            text-align: left; /* 小項目を左詰めにする */
+        }
+        nav ul li ul li {
+            display: block;
+            width: 100%;
+        }
+        nav ul li ul li a {
+            padding: 10px 20px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .project-details h2 {
+            color: #333;
+        }
+        .project-details video {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .project-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .project-details ul li {
+            background-color: #eee;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* タブのスタイル */
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+        }
+        .tabs div {
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            margin-right: -1px;
+            flex: 1;
+            text-align: center;
+        }
+        .tabs div.active {
+            background-color: #fff;
+            border-top: 2px solid #333;
+            font-weight: bold;
+        }
+
+        /* タブのコンテンツ */
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            background-color: #fff;
+        }
+        .tab-content.hidden {
+            display: none;
+        }
+
+        /* コードのスタイル */
+        .gist-container {
+            max-height: 400px; /* 表示範囲の高さを指定します */
+            overflow-y: auto; /* 垂直方向にスクロールを許可します */
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1: タイトル1</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">制作物一覧</a>
+                    <ul>
+                        <li><a href="project1.html">制作物1の長めのタイトル</a></li>
+                        <li><a href="project2.html">制作物2のもう少し長いタイトル</a></li>
+                        <li><a href="project3.html">制作物3の少しだけ長いタイトル</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>プロジェクト概要</h2>
+            <p>このプロジェクトは、○○○という目的で制作されました。主な特徴は○○○です。</p>
+
+            <h2>動画</h2>
+            <video controls>
+                <source src="project1-video.mp4" type="video/mp4">
+                お使いのブラウザは動画タグに対応していません。
+            </video>
+
+            <h2>開発経緯</h2>
+            <p>このプロジェクトは、以下のような背景で開始されました…</p>
+
+            <h2>使用技術</h2>
+            <ul>
+                <li>Unity</li>
+                <li>C#</li>
+                <li>その他の技術やツール</li>
+            </ul>
+
+            <h2>開発でのチャレンジ</h2>
+            <p>このプロジェクトで直面した主なチャレンジとその解決方法について…</p>
+        </section>
+    </main>
+    
+    <main>
+        <section class="project-details">
+            <!-- タブの追加 -->
+            <div class="tabs">
+                <div class="tab-link active" data-tab="tab1">プレイヤー操作</div>
+                <div class="tab-link" data-tab="tab2">敵AI</div>
+                <div class="tab-link" data-tab="tab3">様々なギミック</div>
+            </div>
+
+            <div id="tab1" class="tab-content">
+                <h2>プレイヤーの操作</h2>
+                <video controls>
+                    <source src="project1-video.mp4" type="video/mp4">
+                    お使いのブラウザは動画タグに対応していません。
+                </video>
+                <h3>概要</h3>
+                <p>ここにコード説明1を記載します。</p>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/kosuke-Hanchan/495ebefc5b2740320e020990b1892112.js"></script>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-content hidden">
+                <h2>敵AI</h2>
+                <video controls>
+                    <source src="project1-video.mp4" type="video/mp4">
+                    お使いのブラウザは動画タグに対応していません。
+                </video>
+                <h3>概要</h3>
+                <p>敵AIは状態によって行動を決定しており、各状態時の状況によって状態遷移を行っています。</p>
+                <p>例）待機状態時：プレイヤーとの距離が一定未満の場合「追跡状態」へ遷移</p>
+                <p>　　追跡状態時：初期位置からの距離が設定値を上回る場合「初期位置帰還状態」へ遷移</p>
+                <p>など・・・</p>
+                <p>また、現在の状態を判定し、結果に伴う行動処理を行っている。
+                <p>例）追跡状態：プレイヤーの位置まで移動</p>
+                <p>　　攻撃状態：攻撃アニメーション開始</p>
+                <p>など・・・</p>
+                <h3>敵：サボテン</h3>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/kosuke-Hanchan/35adb4099e7aca25e00be37173cfc78c.js"></script>
+                </div>
+                <h3>敵：スケルトン</h3>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/kosuke-Hanchan/8d78670d622d1400bcd3c5746f6dbdad.js"></script>
+                </div>
+            </div>
+
+            <div id="tab3" class="tab-content hidden">
+                <h2>様々なギミック</h2>
+                <p>当ゲームで作成した複数ギミックを紹介いたします。</p>
+
+                <h3>【スイッチ】</h3>
+                <video controls></video>
+                    <source src="project1-video.mp4" type="video/mp4">
+                </video>
+                <p>　スイッチを押すことで扉を開くことができます。</p>
+                <p>　スイッチには「床タイプ」と「レバータイプ」が存在しており、列挙体変数を設定することで使い分けることができます。</p>
+                <p>　また、フラグ変数を設定することでスイッチを時限型として使用することができます。
+                <div class="gist-container">
+                    <script src="https://gist.github.com/username/gist_id1.js"></script>
+                </div>
+
+                <h3>【鍵付き扉】</h3>
+                <video controls></video>
+                    <source src="project1-video.mp4" type="video/mp4">
+                </video>
+                <p>鍵を所持している時のみ、開くことの出来る扉です。</p>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/username/gist_id1.js"></script>
+                </div>
+
+                <h3>【破壊可能な岩】</h3>
+                <video controls></video>
+                    <source src="project1-video.mp4" type="video/mp4">
+                </video>
+                <p>プレイヤーアクション「爆弾」によって破壊することができます。</p>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/username/gist_id1.js"></script>
+                </div>
+
+                <h3>【アイテム入り樽】</h3>
+                <video controls></video>
+                    <source src="project1-video.mp4" type="video/mp4">
+                </video>
+                <p>破壊することでアイテムが出現する破壊可能オブジェクトです</p>
+                <p>アイテムが出現するか確率を設定することができます</p>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/username/gist_id1.js"></script>
+                </div>
+            </div>
+
+            <h2>GitHubリンク</h2>
+            <p>当ゲームにて作成したその他コードを以下のリンクにまとめております。</p>
+            <p> 閲覧のほどよろしくお願いいたします。</p>
+            <p><a href="https://github.com/kosuke-Hanchan/seisakubutu_script.git" class="button">GitHubへ</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.tab-link').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.getAttribute('data-tab');
+
+                document.querySelectorAll('.tab-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                this.classList.add('active');
+                document.getElementById(target).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
