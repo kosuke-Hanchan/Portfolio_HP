@@ -89,9 +89,9 @@
                     <p>このシステムは、プレイヤーが仮想ジョイスティックを使用してキャラクターをスムーズに操作できるようにするものです。</p>
                     <p>ジャンプやダッシュといったアクションも可能にしました。</p>
                     <div class="tech-points">
-                        <p><strong>技術的なポイント:</strong></p>
+                        <p><strong>ポイント:</strong></p>
                         <ul>
-                            <li>ジョイスティックのみで行えるアクション操作の実装</li>
+                            <li>ジョイスティックのみ(片手のみ)で行えるアクション操作の実装</li>
                             <li>状態遷移による行動制限</li>
                             <li>セッター関数による行動制限</li>
                         </ul>
@@ -104,36 +104,29 @@
                 
                 <h3>● 複数のアクションタイプ</h3>
                 <iframe src="https://drive.google.com/file/d/1fJqQZV3MWTHlNmRc0ZiD3gnHO-M3Z7RL/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
-                <!-- <h3>● 体力要素</h3>
-                <video controls>
-                    <source src="character-movement-demo.mp4" type="video/mp4">
-                </video>
-                <h3>● 奈落からの復帰</h3>
-                <video controls>
-                    <source src="character-movement-demo.mp4" type="video/mp4">
-                </video> -->
             </div>
 
             <div id="tab2" class="tab-content hidden">
                 <h3>● 敵AI</h3>
                 <p>敵キャラクターのAIシステムを開発しました。このシステムでは、敵キャラクターがプレイヤーの位置を感知して状態遷移を行い、追跡したり、攻撃したりする動作を実現しています。</p>
-                <div class="tech-points">
-                    <p><strong>技術的なポイント:</strong></p>
-                    <ul>
-                        <li>NavMeshを使用した経路探索の実装</li>
-                        <li>プレイヤーの動きに応じたリアクション(状態遷移)処理</li>
-                        <li>状態遷移の管理による複数の行動パターンの切り替え</li>
-                        <li>個体差を持たせる設定が可能</li>
-                    </ul>
-                </div>
+
                 <section class="script-section">
                     <h3>敵：スケルトン</h3>
+                    <div class="tech-points">
+                        <p><strong>ポイント:</strong></p>
+                        <ul>
+                            <li>NavMeshを使用した経路探索の実装</li>
+                            <li>プレイヤーの動きに応じたリアクション(状態遷移)処理</li>
+                            <li>状態遷移の管理による複数の行動パターンの切り替え</li>
+                            <li>個体差を持たせる設定が可能</li>
+                        </ul>
+                    </div>
                     <iframe src="https://drive.google.com/file/d/1repScKkFcEmoCfxhnzRe7l8nmzqY2hwM/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
                     <div class="script-about">
                         <ul>
-                            <li>プレイヤーとの距離に応じて追跡、攻撃等の状態遷移を行う。</li>
-                            <li>視界や最大追跡距離等はオブジェクトごとに設定可能(個体差を持たせることができる)</li>
-                            <li>NavMeshによりプレイヤーの追跡を行う</li>
+                            <li>プレイヤーとの距離に応じた追跡、攻撃等の状態遷移</li>
+                            <li>オブジェクトごとに設定可能な状態遷移条件閾値(個体差を持たせることができる)</li>
+                            <li>NavMeshによる移動</li>
                         </ul>
                     </div>
                     <h4>行動制御スクリプト</h4>
@@ -142,31 +135,20 @@
                     </div>
                 </section>
 
-                <!-- <section class="script-section">
-                    <h3>敵：サボテン</h3>
-                    <video controls>
-                        <source src="project1-video.mp4" type="video/mp4">
-                    </video>
-                    <div class="script-about">
+                <section class="script-section">
+                    <h3>敵：爆弾ガニ(中ボス)</h3>
+                    <div class="tech-points">
+                        <p><strong>ポイント:</strong></p>
                         <ul>
-                            <li>プレイヤーとの距離に応じて攻撃の種類が変わる</li>
                             <li></li>
                         </ul>
                     </div>
-                    <div class="gist-container">
-                        <script src="https://gist.github.com/kosuke-Hanchan/35adb4099e7aca25e00be37173cfc78c.js"></script>
-                    </div>
-                </section> -->
-
-                <section class="script-section">
-                    <h3>敵：爆弾ガニ(中ボス)</h3>
-                    <video controls>
-                        <source src="project1-video.mp4" type="video/mp4">
-                    </video>
+                    <iframe src="https://drive.google.com/file/d/1fk0we7kaMcXs33AiGQnjWAIV4cQ1FiBL/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
                     <div class="script-about">
                         <ul>
-                            <li>特定の状態でのみダメージを与えることができる</li>
-                            <li>爆弾を跳ね返して戦う</li>
+                            <li>乱数による攻撃タイプのランダム性</li>
+                            <li>特定の状態でのみダメージを与えることができる状態管理</li>
+                            <li>敵の攻撃を利用する戦闘要素</li>
                         </ul>
                     </div>
                     <h4>行動制御スクリプト</h4>
@@ -184,7 +166,7 @@
                 <h3>● 様々なギミック【1】</h3>
                 <p>当ゲームで作成した複数ギミックを紹介いたします。</p>
                 <div class="tech-points">
-                    <p><strong>技術的なポイント:</strong></p>
+                    <p><strong>ポイント:</strong></p>
                     <ul>
                         <li>当たり判定をトリガーとしたリアクション処理</li>
                         <li>スイッチや鍵の種類を列挙型/フラグ型の変数を設定することで種類選択が可能(管理が容易に)</li>
@@ -240,7 +222,7 @@
                 <h3>● 様々なギミック【2】</h3>
                 <p>当ゲームで作成した複数ギミックを紹介いたします。</p>
                 <div class="tech-points">
-                    <p><strong>技術的なポイント:</strong></p>
+                    <p><strong>ポイント:</strong></p>
                     <ul>
                         <li>当たり判定をトリガーとしたリアクション処理</li>
                         <li>スイッチや鍵の種類を列挙型/フラグ型の変数を設定することで種類選択が可能(管理が容易に)</li>
@@ -287,7 +269,7 @@
 
 
     <footer>
-        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+        <p>&copy; 2024 My Portfolio.</p>
     </footer>
 
     
