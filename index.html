@@ -1,87 +1,183 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .project-item {
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .project-item h3 {
+        font-size: 1.6em;
+        color: #2c3e50;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-left: 6px solid #3498db;
+        padding-left: 10px;
+        background-color: #ecf0f1;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .button-group {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .button-group a.button {
+        padding: 10px 18px;
+        background-color: #ffffff;
+        color: #3498db;
+        text-decoration: none;
+        border: 2px solid #3498db;
+        border-radius: 4px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    }
+    .button-group a.button:hover {
+        background-color: #3498db;
+        color: white;
+        box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+    }
+    .button-group a.button i {
+        font-size: 1.2em;
+    }
+    /* 強調表示: コード紹介ページなど */
+    .button-highlight {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 20px;
+        background-color: #e67e22;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+    }
+    .button-highlight:hover {
+        background-color: #d35400;
+    }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <h2>半田 滉介</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">制作物一覧</a>
-                    <ul>
-                        <li><a href="main_project.html">メイン紹介作品：タートルアドベンチャー</a></li>
-                        <li><a href="project1.html">ストア公開アプリ1：消える！まるばつゲーム！</a></li>
-                        <li><a href="project2.html">ストア公開アプリ2：TwinShips</a></li>
-                        <li><a href="project3.html">ストア公開予定：ShadowRoad</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        
+  <header>
+    <h1>ゲーム開発ポートフォリオ</h1>
+    <h2>半田 滉介 - Game Developer</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">制作物一覧</a>
+          <ul>
+            <li><a href="main_project.html">コード付き：タートルアドベンチャー</a></li>
+            <li><a href="project1.html">公開中：地球ゲーム</a></li>
+            <li><a href="project1.html">公開中：憶えてすすめ！- 記憶×迷路パズル</a></li>
+            <li><a href="project2.html">公開中：TwinShips - 隕石を避けろ！</a></li>
+            <li><a href="project3.html">公開中：消える！まるばつゲーム！</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-        <section class="featured-project">
-            <h2>メイン制作物「タートル＆アドベンチャー」</h2>
+  <main>
+    <section class="about-me">
+      <h2>自己紹介</h2>
+      <p>UnityとC#を用いた個人ゲーム開発を中心に、カジュアルからアクションアドベンチャーまで幅広く取り組んでいます。<br/>
+      実務を通じて培ったスケジュール管理や一気通貫の応用力を活かし、ユーザーに“驚き”と“楽しさ”を届ける作品づくりに挑戦しています。</p>
+      <p>
+        <strong>使用技術：</strong> Unity, C#, GitHub, GoogleAdmob(Unity)<br>
+        <strong>公開実績：</strong> Google Play にて4本のゲームを公開中<br>
+        <strong>今後の目標：</strong> ゲーム業界での実務経験、チーム開発や中規模プロジェクトへの参画
+      </p>
+    </section>
 
-            <!-- メイン制作物に動画を追加 -->
-                <iframe src="https://drive.google.com/file/d/1u-rjt0wNkOlFa7R6JG5fqRA9IpbQ6ULI/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+    <section class="featured-project">
+      <h2>制作中：タートルアドベンチャー</h2>
+      <iframe src="https://drive.google.com/file/d/1u-rjt0wNkOlFa7R6JG5fqRA9IpbQ6ULI/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+      <p>片手操作で本格アクションを体験できるスマホ向け3Dアクションゲームです。<br/>
+      敵AI、状態遷移、各種ギミック、ステージ構成などを幅広く考案・開発しています。<br/>
+      開発期間（現時点）：100時間以上(2023年5月より他ゲームと並行して開発中)</p>
+      <a href="main_project.html" class="button-highlight">コード紹介ページ</a>
+      <div class="button-group">
+        <a href="maru_demo/maru_demo.html" class="button"><i class="fas fa-gamepad"></i> デモプレイ</a>
+      </div>
+    </section>
 
-            <p>このプロジェクトは、自身のスキルを向上を目的敵として制作中のゲームで、スマホ用3Dアクションアドベンチャーゲームです。</p>
-            <p><a href="main_project.html" class="button">コード等紹介ページ</a></p>
-            <h2>デモプレイ</h2>
-            <p><a href="main_demo/main_demo.html" class="button">こちらからプレイいただけます</a></p>
-        </section>
+    <section class="projects-list">
+      <h2>公開済みゲーム</h2>
+      <hr/>
+      <div class="project-item">
+        <h3>地球ゲーム</h3>
+        <iframe src="https://drive.google.com/file/d/1f0gLWu6FJzcdUbNKFLbFEX5z1EDoHjZ7/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+        <p>流行ジャンルの分析とユーザー動向の確認を目的に制作したプロジェクトです。<br/>
+        国ごとのダウンロード数に差が出るなど、ユーザーターゲティングの重要性を実感しました。<br/>
+        開発期間：約35時間（2025年4月一杯）<br/>
+        2025年5月よりGoogle Play にて運用開始。</p>
+        <div class="button-group">
+          <a href="circlemerge_demo/circlemerge_demo.html" class="button"><i class="fas fa-gamepad"></i> デモプレイ</a>
+          <a href="https://play.google.com/store/apps/details?id=com.HanchanSoft.EarthGame" class="button" target="_blank"><i class="fab fa-google-play"></i> Play Store</a>
+        </div>
+      </div>
 
-        <section class="featured-project">
-            <h2>GooglePlay公開中ゲーム①</h2>
+      <hr/>
+      <div class="project-item">
+        <h3>憶えてすすめ！- 記憶×迷路パズル</h3>
+        <iframe src="https://drive.google.com/file/d/11APB5YwQ7iuPb0XsoLRCDAeBco2GSkHk/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+        <p>スタミナ制や報酬広告、外部ツールによるステージ構築など収益化と運用効率を意識して設計しました。</br>
+            開発期間：約50時間（2025年1月～3月）<br/>
+            2025年3月よりGoogle Play にて運用開始。</p>
+        <div class="button-group">
+          <a href="shadow_demo/shadow_demo.html" class="button"><i class="fas fa-gamepad"></i> デモプレイ</a>
+          <a href="https://play.google.com/store/apps/details?id=com.UnityTechnologies.com.unity.HanchanSoft" class="button" target="_blank"><i class="fab fa-google-play"></i> Play Store</a>
+        </div>
+      </div>
+      <hr/>
 
-            <div class="project-item">
-                <h3>消える！まるばつゲーム！</h3>
+      <div class="project-item">
+        <h3>TwinShips - 隕石を避けろ！</h3>
+        <iframe src="https://drive.google.com/file/d/1js8Bwraz27kiQlq9e-9BHNHLDCgfkxNk/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+        <p>カジュアルアクションとしてユーザーフィードバックを得る目的で開発。<br/>
+        2022年6月よりGoogle Play にて運用開始。</p>
+        <div class="button-group">
+          <a href="twin_demo/twin_demo.html" class="button"><i class="fas fa-gamepad"></i> デモプレイ</a>
+          <a href="https://play.google.com/store/apps/details?id=com.KHanchan.TwinShips" class="button" target="_blank"><i class="fab fa-google-play"></i> Play Store</a>
+        </div>
+      </div>
 
-                <!-- 制作物1に動画を追加 -->
-                <iframe src="https://drive.google.com/file/d/1i37FnjxFnzM5bVpeYwwlYXLok4Katgd4/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+      <hr/>
+      <div class="project-item">
+        <h3>消える！まるばつゲーム！</h3>
+        <iframe src="https://drive.google.com/file/d/1i37FnjxFnzM5bVpeYwwlYXLok4Katgd4/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+        <p>短期間でのリリースを目標に、スケジュール管理と迅速な実装力を養う目的で制作しました。<br/>
+        開発期間：約15時間（2024年8月一杯）<br/>
+        2024年10月よりGoogle Playにて運用開始。</p>
+        <div class="button-group">
+          <a href="maru_demo/maru_demo.html" class="button"><i class="fas fa-gamepad"></i> デモプレイ</a>
+          <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.marubatugame" class="button" target="_blank"><i class="fab fa-google-play"></i> Play Store</a>
+        </div>
+      </div>
+      <hr/>
+    </section>
+  </main>
 
-                <p>このプロジェクトは、短期間での開発を目標に制作致しました。（製作期間：10日間）</p>
-                <p>開発は2024/10/05～2024/10/15の期間で行い、10/17にGooglePlayにて運用を開始致しました。</p>
-                <h2>デモプレイ</h2>
-                <p><a href="maru_demo/maru_demo.html" class="button">こちらからプレイいただけます</a></p>
-            </div>
-        </section>
-        <section class="featured-project">
-            <h2>GooglePlay公開中ゲーム②</h2>
-            <div class="project-item">
-                <h3>隕石を避けろ！-TwinShips-</h3>
-
-                <!-- 制作物2に動画を追加 -->
-                <iframe src="https://drive.google.com/file/d/1js8Bwraz27kiQlq9e-9BHNHLDCgfkxNk/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
-                <p>このプロジェクトは、自身の作品に対してフィードバックを得ることを目的に制作いたしました。</p>
-                <p>本プロジェクトは、2022年1月から開発を開始し、2022年6月からGooglePlayにて運用中です。</p>
-                <h2>デモプレイ</h2>
-                <p><a href="twin_demo/twin_demo.html" class="button">こちらからプレイいただけます</a></p>
-            </div>
-        </section>
-        <section class="featured-project">
-            <h2>GooglePlay公開予定ゲーム</h2>
-            <div class="project-item">
-                <h3>ShadowRoad（仮名）</h3>
-
-                <!-- 制作物3に動画を追加 -->
-                <iframe src="https://drive.google.com/file/d/11APB5YwQ7iuPb0XsoLRCDAeBco2GSkHk/preview"  width="315" height="560" allow="autoplay" allowfullscreen></iframe>
-                <p>このプロジェクトはスキルアップを目的とし、収益化を前提に開発を進めているプロジェクトです。</p>
-                <p>本プロジェクトは、2025年1月から開発を開始し、2025年3月中にGooglePlayにて公開を予定しております。</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 半田 滉介 - Portfolio</p>
+  </footer>
 </body>
 </html>
