@@ -1,44 +1,142 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .project-item {
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .project-item h3 {
+        font-size: 1.6em;
+        color: #2c3e50;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-left: 6px solid #3498db;
+        padding-left: 10px;
+        background-color: #ecf0f1;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .button-group {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .button-group a.button {
+        padding: 10px 18px;
+        background-color: #ffffff;
+        color: #3498db;
+        text-decoration: none;
+        border: 2px solid #3498db;
+        border-radius: 4px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    }
+    .button-group a.button:hover {
+        background-color: #3498db;
+        color: white;
+        box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+    }
+    .button-group a.button i {
+        font-size: 1.2em;
+    }
+    /* 強調表示: コード紹介ページなど */
+    .button-highlight {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 20px;
+        background-color: #e67e22;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+    }
+    .button-highlight:hover {
+        background-color: #d35400;
+    }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>プロジェクト名：隕石を避けろ！-TwinShips-</h1>
-        <h2>半田 滉介</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">制作物一覧</a>
-                    <ul>
-                        <li><a href="main_project.html">メイン紹介作品：タートルアドベンチャー</a></li>
-                        <li><a href="project1.html">ストア公開アプリ1：消える！まるばつゲーム！</a></li>
-                        <li><a href="project2.html">ストア公開アプリ2：TwinShips</a></li>
-                        <li><a href="project3.html">ストア公開予定：ShadowRoad</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>ゲーム開発ポートフォリオ</h1>
+    <h2>半田 滉介 - Game Developer</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="main_project.html">コード紹介作品ページ</a></li>
+        <!-- <li> -->
+            <!-- <a href="#">制作物一覧</a> -->
+            <!-- <ul>
+                <li><a href="main_project.html">コード紹介ページ</a></li>
+                <li><a href="project1.html">ストア公開中アプリ1：地球ゲーム</a></li>
+                <li><a href="project1.html">ストア公開中アプリ2：消える！まるばつゲーム！</a></li>
+                <li><a href="project2.html">ストア公開中アプリ3：TwinShips</a></li>
+                <li><a href="project3.html">ストア公開中アプリ4：ShadowRoad</a></li>
+            </ul> -->
+        <!-- </li> -->
+      </ul>
+    </nav>
+  </header>
+
 
     <main>
         <section class="section">
             <h2>プロジェクト概要</h2>
-            <p>このプロジェクトは、Unityを用いて開発したカジュアルゲームです。</p>
+            <p>本ゲームは、最初に一瞬だけ表示されるルートを記憶し、見えなくなった状態でギミックや障害物を避けながら、正しい道をたどってゴールを目指す、記憶力と観察力が問われる迷路型パズルゲームです。</p>
+            <p>操作はすべてタップ・フリックで完結するため、誰でも直感的に遊べるシンプルな操作性を実現しています。</p>
+            <p>また、ステージごとに難易度が徐々に上がっていく構成とし、繰り返し挑戦する楽しさと達成感を得られるよう設計しました。</p>
             <h2>デモプレイ動画</h2>
-            <iframe src="https://drive.google.com/file/d/11APB5YwQ7iuPb0XsoLRCDAeBco2GSkHk/preview"  width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+            <iframe src="https://drive.google.com/file/d/11APB5YwQ7iuPb0XsoLRCDAeBco2GSkHk/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
 
             <h2>開発経緯</h2>
-            <p>このプロジェクトはスキルアップを目的とし、収益化を前提に開発を進めているプロジェクトです。</p>
+            <p>限られた期間内で高品質なものを形にするには、作業の効率化と調整しやすい仕組みづくりが重要だと考えていました。</p>
+            <p>個人開発においてもこの意識を実践するため、特に手間がかかりやすい「複数ステージの構築・調整作業」の効率化をテーマに据えて取り組みました。</p>
+            <p>試行錯誤を通じて、少ない労力でステージを増やし、調整しやすい開発体制をどう作るかという点を自分なりに掘り下げ、より実践的なスキルの習得と成長を目指しました。</p>
 
             <h2>制作期間・プロセス</h2>
-            <p>本プロジェクトは、2025年1月から開発を開始し、2025年3月中にGooglePlayにて公開を予定しております。</p>
-        
+            <p>本プロジェクトは2024年12月～2025年3月（約70時間以上）で開発し、現在Playストアで公開中です。</p>
+            <p>全工程（企画・設計・実装・演出・UI・テスト・公開対応）を1人で担当しています</p>
+            <p> ※ただし、キャラクターモデル、UI等の素材は外部アセットを活用</p>
+
+            <h2>工夫した点</h2>
+            <h3>【マップを視覚的に作成・編集出来る外部ツールの作成】</h3>
+            <p>ゲーム本体とは別に、ルート・障害物・アイテム・スタート/ゴールなどを視覚的にクリック操作で配置し、JSON形式で保存・読み込みできる専用ツールを作成しました。</p>
+            <p>ゲーム側ではそのJSONデータを読み込み、マップを自動生成する仕組みを構築しています。これにより、ステージごとのマップを手作業で配置する工程を省略できました。</p>
+            <p>その結果、マップ作成にかかる時間を大幅に短縮できただけでなく、ステージの微調整やテストもスムーズに行えるようになり、開発効率の向上に大きく寄与しました。</p>
+            </br>
+            <hr/>
+            <h3>外部ツール→生成マップ例</h3>
+            <iframe src="https://drive.google.com/file/d/1rrv4hyfowtz_VCz12fybs4uLduR37DFX/preview" width="640" height="480" allow="autoplay"></iframe>
+            </br>
+            <hr/>
+            <h3>外部ツール：出力JSONデータ例</h3>
+            <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/d0f6d49bef06297edb537b7dbdafea11.js"></script>
+            </div>
+            </br>
+            <hr/>
+            <h3>ゲーム側：マップ自動生成処理</h3>
+            <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/7e085e5fd60dde61ffebeec51c744f96.js"></script>
+            </div>
         </section>
     </main>
 
