@@ -5,303 +5,513 @@
     box-sizing: border-box;
 }
 
-
-
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+:root {
+    --color-primary: #3498db;
+    --color-primary-dark: #21618c;
+    --color-accent: #e67e22;
+    --color-bg: #f4f6f8;
+    --color-surface: #ffffff;
+    --color-surface-soft: #f8fafc;
+    --color-text: #243447;
+    --color-muted: #64748b;
+    --color-border: #e5e7eb;
+    --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.08);
+    --shadow-card-hover: 0 14px 32px rgba(15, 23, 42, 0.12);
+    --radius-card: 14px;
 }
-
-
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
 }
 
-
-
-header {
-    background-color: #2c3e50;
+.site-header {
+    background: linear-gradient(135deg, #1f3447, #2c3e50);
     color: #fff;
-    padding: 10px 0;
+    padding: 28px 16px 22px;
     text-align: center;
-    margin-bottom: 40px;
-}
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    margin-top: 20px;
+    margin-bottom: 36px;
 }
 
-header h2 {
-    color: #fff;
-    margin: 0;
+.site-header h1 {
+    font-size: 2.4em;
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
 }
 
-
+.site-header h2 {
+    color: #dbeafe;
+    font-size: 1.15em;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
-nav ul li {
-    display: inline-block;
-    position: relative;
-    margin-right: 15px;
-}
+
 nav ul li a {
     color: #fff;
-    background-color: #3a5166;
+    background-color: rgba(255, 255, 255, 0.12);
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 20px;
+    font-size: 1em;
+    padding: 10px 18px;
+    border-radius: 999px;
     display: block;
-}
-nav ul li a:hover {
-    background-color: #555;
-}
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    padding: 0;
-    min-width: 200px;
-    border-radius: 0 0 5px 5px;
-    z-index: 1000;
-    white-space: nowrap;
-    text-align: left; /* 小項目を左詰めにする */
-}
-nav ul li ul li {
-    display: block;
-    width: 100%;
-}
-nav ul li ul li a {
-    padding: 10px 20px;
-}
-nav ul li:hover > ul {
-    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.2s ease;
 }
 
-.about-me, .featured-project, .projects-list {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    max-width: 800px;
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-1px);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto 48px;
+    padding: 0 20px;
+}
+
+.portfolio-section {
+    background-color: var(--color-surface);
+    padding: 28px;
+    border-radius: var(--radius-card);
+    margin-bottom: 32px;
+    max-width: 840px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
 }
 
-h2 {
-    font-size: 2em;
-    color: #2c3e50;
+.section-title {
+    margin-bottom: 24px;
+    padding-left: 14px;
+    border-left: 6px solid var(--color-primary);
+}
+
+.section-title .section-label {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.78em;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    margin-bottom: 4px;
+}
+
+.section-title h2 {
+    margin-bottom: 0;
+    font-size: 1.75em;
+    color: #1e293b;
+    line-height: 1.35;
+}
+
+p {
+    font-size: 1.05em;
+    color: #2c2c2c;
+    margin-bottom: 16px;
+}
+
+.update-date {
+    color: var(--color-muted);
+    font-size: 0.95em;
+}
+
+.skill-tags,
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.skill-tags span,
+.project-tech span {
+    background-color: #eef5fb;
+    color: var(--color-primary-dark);
+    border: 1px solid #d6eaf8;
+    border-radius: 999px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.skill-tags span {
+    padding: 8px 14px;
+    font-size: 0.94em;
+}
+
+.project-tech {
     margin-bottom: 20px;
 }
 
-.about-me p, .featured-project p, .projects-list p {
-    font-size: 1.2em;
-    color: #2c2c2c; 
-    margin-bottom: 20px;
+.project-tech span {
+    padding: 6px 12px;
+    font-size: 0.84em;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.toc-list {
+    list-style: none;
+}
+
+.toc-list li {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.toc-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.toc-list a {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
     border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.button {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.button:hover {
-    background-color: #555;
+    color: var(--color-primary);
+    font-weight: bold;
+    transition: all 0.2s ease;
 }
 
+.toc-list a:hover {
+    background-color: var(--color-surface-soft);
+    color: var(--color-primary-dark);
+    transform: translateX(4px);
+}
+
+.toc-list a i {
+    margin-right: 8px;
+    width: 20px;
+}
+
+.toc-list span {
+    display: block;
+    margin-left: 28px;
+    margin-top: 1px;
+    color: var(--color-muted);
+    font-size: 0.8em;
+    line-height: 1.35;
+    font-weight: normal;
+}
+
+.featured-project {
+    border: 1px solid #f1c27d;
+    box-shadow: 0 10px 28px rgba(230, 126, 34, 0.12);
+}
+
+.featured-project .section-title {
+    border-left-color: var(--color-accent);
+}
+
+.featured-project .section-label {
+    color: var(--color-accent);
+}
+
+.project-item {
+    margin-bottom: 32px;
+    padding: 28px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item:last-child {
+    margin-bottom: 0;
+}
+
+.project-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.project-item h3 {
+    font-size: 1.45em;
+    color: #1e293b;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 5px solid var(--color-primary);
+    line-height: 1.4;
+}
+
+iframe {
+    max-width: 100%;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.10);
+    background-color: #000;
+}
+
+.media-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.button-group {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.button,
 a.button {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 18px;
+    background-color: #ffffff;
+    color: var(--color-primary);
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.14);
 }
 
+.button:hover,
 a.button:hover {
-    background-color: #2980b9;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.26);
+}
+
+.button-highlight {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.20);
+}
+
+.button-highlight:hover {
+    background-color: #d35400;
+    border-color: #d35400;
+    color: #ffffff;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    padding: 20px 0;
+    padding: 24px 12px;
     background-color: #2c3e50;
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    .portfolio-section,
+    .project-item {
+        padding: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 1.45em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
 
 
-.section {
-    padding: 20px;
-}
-.section h2 {
-    margin-top: 0;
-    color: #333;
-    border-bottom: 2px solid #333; /* アンダーバーを追加 */
-    padding-bottom: 10px; /* アンダーバーとテキストの間隔を調整 */
-    margin-top: 20px;
-}
-.tech-points ul {
-    list-style: none;
-    padding: 0;
-}
-.tech-points ul li {
-    background-color: #eee;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+/* ===== Code showcase page additions ===== */
+.project-hero .lead-text {
+    font-size: 1.12em;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 22px;
 }
 
+.media-card {
+    background-color: var(--color-surface-soft);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
 
-.script-about ul{
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-.script-section{
-    margin-top: 40px;
-}
-.script-section h3{
-    border-bottom: 2px solid #333; /* アンダーバーを追加 */
+.media-label {
+    display: inline-block;
+    color: var(--color-primary-dark);
+    font-size: 0.9em;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-
-
-.project-item {
-    margin-bottom: 40px; /* 制作物間に40pxの余白を追加 */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
 }
 
-video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    /* margin-bottom: 20px; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.info-card,
+.script-section,
+.tech-points,
+.script-about {
+    background-color: var(--color-surface-soft);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 18px;
 }
 
-pre {
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
+.info-card h3,
+.script-section h3,
+.tab-content h3 {
+    color: #1e293b;
+    font-size: 1.25em;
+    margin-bottom: 12px;
+    line-height: 1.45;
 }
 
-code {
-    font-family: "Courier New", Courier, monospace;
-    color: #333;
+.info-card h3 i {
+    color: var(--color-primary);
+    margin-right: 6px;
 }
-/* タブのスタイル */
+
+.info-card p:last-child,
+.script-about ul:last-child,
+.tech-points ul:last-child {
+    margin-bottom: 0;
+}
+
+.note-text {
+    color: var(--color-muted);
+    font-size: 0.95em;
+}
+
 .tabs {
-    display: flex;
-    cursor: pointer;
-    border-bottom: 2px solid #ccc;
-}
-.tabs div {
-    padding: 12px 24px;
-    background-color: #f1f1f1;
-    border: 2px solid #ddd;
-    border-bottom: none;
-    margin-right: -1px;
-    flex: 1;
-    text-align: center;
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    font-weight: bold;
-}
-.tabs div:hover {
-    background-color: #e0e0e0;
-    border-color: #bbb;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-.tabs div.active {
-    background-color: #2c3e50;
-    border-top: 3px solid #333;
-    border-color: #333;
-    font-weight: bold;
-    color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 22px;
 }
 
-/* タブのコンテンツ */
-.tab-content {
-    padding: 20px;
-    border: 2px solid #ddd;
-    border-top: none;
-    background-color: #fff;
-    position: relative;
-    z-index: 1;
+.tab-link {
+    cursor: pointer;
+    padding: 12px 14px;
+    background-color: #eef5fb;
+    color: var(--color-primary-dark);
+    border: 1px solid #d6eaf8;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s ease;
 }
+
+.tab-link:hover {
+    transform: translateY(-1px);
+    background-color: #e0f2fe;
+}
+
+.tab-link.active {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 18px rgba(52, 152, 219, 0.24);
+}
+
+.tab-content {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
 .tab-content.hidden {
     display: none;
 }
 
-
-/* コードのスタイル */
-.gist-container {
-    max-height: 400px; /* 表示範囲の高さを指定します */
-    overflow-y: auto; /* 垂直方向にスクロールを許可します */
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-/* 箇条書きのスタイル調整 */
 .tech-points {
-    background-color: #f9f9f9;
-    padding: 10px 15px;
-    border-left: 4px solid #333;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 18px 0;
+    border-left: 5px solid var(--color-primary);
 }
-.tech-points ul {
-    margin: 0;
-    padding-left: 20px;
-    list-style-type: disc;
-}
-.tech-points li {
+
+.tech-points p {
     margin-bottom: 8px;
 }
-@media (max-width: 768px) {
-    body {
-        padding: 0 10px;
+
+.tech-points ul,
+.script-about ul {
+    margin-left: 20px;
+    color: #334155;
+}
+
+.tech-points li,
+.script-about li {
+    margin-bottom: 8px;
+}
+
+.script-section {
+    margin-top: 24px;
+}
+
+.script-section h4 {
+    color: var(--color-primary-dark);
+    font-size: 1.05em;
+    margin: 18px 0 10px;
+    padding-left: 10px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.gist-container {
+    max-height: 420px;
+    overflow-y: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #f8fafc;
+    margin-bottom: 20px;
+}
+
+.code-showcase iframe,
+.script-section iframe,
+.tab-content iframe {
+    margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+    .info-grid {
+        grid-template-columns: 1fr;
     }
 
-    header h1 {
-        font-size: 2em;
+    .tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-content {
+        padding: 16px;
     }
 }
