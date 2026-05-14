@@ -28,12 +28,13 @@
       <div class="skill-tags">
         <span>Unity</span>
         <span>C#</span>
-        <span>GitHub</span>
+        <span>Nintendo SDK</span>
+        <span>Nintendo Switch</span>
         <span>Google AdMob</span>
         <span>In-App Purchase(IAP)</span>
         <span>PlayFab</span>
-        <span>Nintendo SDK</span>
-        <span>Nintendo Switch</span>
+        <span>GitHub</span>
+        <span>効率化外部ツール作成</span>
         <span>JSON</span>
         <span>生成AI活用開発</span>
         <span>UI/UX設計</span>
@@ -44,7 +45,6 @@
         <span>データ駆動設計</span>
         <span>グリッド管理</span>
         <span>入力制御</span>
-        <span>効率化ツール作成</span>
       </div>
     </section>
 
@@ -74,9 +74,9 @@
         <li><a href="#planetmerge"><i class="fas fa-globe"></i> Planet Merge<br /><span>360度重力空間のマージパズル</span></a></li>
         <li><a href="#orderguess"><i class="fas fa-brain"></i> OrderGuessingPuzzle<br /><span>推理力で順番を当てるパズルゲーム</span></a></li>
         <li><a href="#desktopmanager"><i class="fas fa-folder-open"></i> デスクトップマネージャー<br /><span>段取り力が試されるタスク管理風ゲーム</span></a></li>
+        <li><a href="#marubatsu"><i class="fas fa-times-circle"></i> 消える！まるばつゲーム！<br /><span>4手目で駒が消える戦略ボードゲーム</span></a></li>
         <li><a href="#memorymaze"><i class="fas fa-route"></i> 憶えてすすめ！<br /><span>道が消える記憶×迷路パズル</span></a></li>
         <li><a href="#slidepuzzle"><i class="fas fa-th-large"></i> スライドパズル<br /><span>難易度が上がるエンドレスパズル</span></a></li>
-        <li><a href="#marubatsu"><i class="fas fa-times-circle"></i> 消える！まるばつゲーム！<br /><span>4手目で駒が消える戦略ボードゲーム</span></a></li>
         <li><a href="#marubatsu"><i class="fas fa-office-chair"></i> 進め！オフィスチェアー！<br /><span>強化して遠くまで飛ばすミニゲーム</span></a></li>
         <li><a href="#twinships"><i class="fas fa-rocket"></i> TwinShips<br /><span>2機同時操作で隕石を避けるアクション</span></a></li>
       </ul>
@@ -183,6 +183,29 @@
         <p><strong>開発期間：</strong>約10時間（2025年7月15日～現在）</p>
       </article>
 
+      <article class="project-item" id="marubatsu">
+        <h3>消える！まるばつゲーム！（2024年10月リリース）</h3>
+        <div class="project-tech">
+          <span>Unity</span>
+          <span>C#</span>
+          <span>Google AdMob</span>
+          <span>ターン制ゲーム設計</span>
+          <span>状態管理</span>
+          <span>UI設計</span>
+        </div>
+        <iframe src="https://www.youtube.com/embed/G--4tLeYrLw" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+        <p><strong>ゲーム概要：</strong>伝統的なまるばつゲームに「4手目で最古のシンボルが消える」新ルールを加えた、戦略性の高いボードゲームです。</p>
+        <p><strong>開発目的：</strong>短期間での開発を目標に制作し、スケジュール管理と迅速な実装力を養うことを目的としました。</p>
+        <p><strong>成果：</strong>企画、素材作成、実装といった各作業の時間を管理することで、30時間以内での開発とリリースを実現しました。</p>
+        <p><strong>リリース実績：</strong>App Store, Google Play</p>
+        <p><strong>開発期間：</strong>約25時間（2024年10月5日～10月15日）</p>
+        <div class="button-group">
+          <a href="maru_demo/maru_demo.html" class="button"><i class="fas fa-gamepad"></i> デモプレイ(PC)</a>
+          <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.marubatugame" class="button" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+          <a href="https://apps.apple.com/us/app/消える-まるばつゲーム/id6748982122" class="button" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        </div>
+      </article>
+
       <article class="project-item" id="memorymaze">
         <h3>憶えてすすめ！- 記憶×迷路パズル（2025年3月リリース）</h3>
         <div class="project-tech">
@@ -194,7 +217,7 @@
           <span>データ駆動設計</span>
           <span>マップ生成</span>
         </div>
-        <iframe src="https://drive.google.com/file/d/11APB5YwQ7iuPb0XsoLRCDAeBco2GSkHk/preview" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/HxjAjpFQJoA" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
         <p><strong>ゲーム概要：</strong>ゴールへの道が徐々に消えていく迷路パズルです。プレイヤーは記憶力を頼りに、ギミックを乗り越えながら進んでいくユニークな設計となっています。</p>
         <p><strong>開発目的：</strong>ステージ運用の効率化を学ぶことを目的に開発しました。</p>
         <p><strong>成果：</strong>JSONファイルを活用したマップ生成と、視覚的に編集可能な外部ステージエディタを開発し、制作効率を向上させました。</p>
@@ -222,29 +245,6 @@
         <div class="button-group">
           <a href="https://play.google.com/store/apps/details?id=com.HanchanSoft.EndlessSlidePuzzle" class="button" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
           <a href="https://apps.apple.com/us/app/slidepuzzle-endless/id6749024344" class="button" target="_blank"><i class="fab fa-apple"></i> App Store</a>
-        </div>
-      </article>
-
-      <article class="project-item" id="marubatsu">
-        <h3>消える！まるばつゲーム！（2024年10月リリース）</h3>
-        <div class="project-tech">
-          <span>Unity</span>
-          <span>C#</span>
-          <span>Google AdMob</span>
-          <span>ターン制ゲーム設計</span>
-          <span>状態管理</span>
-          <span>UI設計</span>
-        </div>
-        <iframe src="https://www.youtube.com/embed/G--4tLeYrLw" width="315" height="560" allow="autoplay" allowfullscreen></iframe>
-        <p><strong>ゲーム概要：</strong>伝統的なまるばつゲームに「4手目で最古のシンボルが消える」新ルールを加えた、戦略性の高いボードゲームです。</p>
-        <p><strong>開発目的：</strong>短期間での開発を目標に制作し、スケジュール管理と迅速な実装力を養うことを目的としました。</p>
-        <p><strong>成果：</strong>企画、素材作成、実装といった各作業の時間を管理することで、30時間以内での開発とリリースを実現しました。</p>
-        <p><strong>リリース実績：</strong>App Store, Google Play</p>
-        <p><strong>開発期間：</strong>約25時間（2024年10月5日～10月15日）</p>
-        <div class="button-group">
-          <a href="maru_demo/maru_demo.html" class="button"><i class="fas fa-gamepad"></i> デモプレイ(PC)</a>
-          <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.marubatugame" class="button" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
-          <a href="https://apps.apple.com/us/app/消える-まるばつゲーム/id6748982122" class="button" target="_blank"><i class="fab fa-apple"></i> App Store</a>
         </div>
       </article>
 
