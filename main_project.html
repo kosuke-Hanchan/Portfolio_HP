@@ -1,385 +1,494 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>タートルアドベンチャー - コード紹介</title>
-<link href="styles.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>タートルアドベンチャー - コード紹介</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-<header class="site-header">
-<h1>タートルアドベンチャー</h1>
-<h2>コード紹介 / Game Development Portfolio</h2>
-<nav>
-<ul>
-<li><a href="index.html"><i class="fas fa-home"></i> Home・他作品</a></li>
-<li><a href="main_project.html"><i class="fas fa-code"></i> コード紹介ページ</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<section class="portfolio-section project-hero">
-<div class="section-title">
-<span class="section-label">FEATURED PROJECT</span>
-<h2>タートルアドベンチャー</h2>
-</div>
-<div class="project-tech">
-<span>Unity</span>
-<span>C#</span>
-<span>Input System</span>
-<span>CharacterController</span>
-<span>Animator</span>
-<span>NavMeshAgent</span>
-<span>Cinemachine</span>
-<span>状態遷移管理</span>
-<span>セーブ・ロード</span>
-<span>UIフォーカス制御</span>
-<span>Nintendo Switch移植検証</span>
-</div>
-<p class="lead-text">探索・戦闘・ギミック攻略を行う3Dアクションアドベンチャーです。<br />現在はNintendo Switch向けを想定し、入力制御・UI操作・セーブ復帰を中心に改善しています。</p>
-<div class="media-grid">
-<div class="media-card vertical-media">
-<span class="media-label">デモプレイ動画（2026/5/30時点）</span>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM" title="デモプレイ動画" width="560"></iframe>
-</div>
-<div class="media-card wide-media">
-<span class="media-label">Switchでのテストプレイ（2025/8/11時点）</span>
-<iframe allow="autoplay" allowfullscreen="" height="315" src="https://www.youtube.com/embed/Kh-J6cAp7Sg?si=3i33ctn1SQk-4mPD" title="Switch版テストプレイ動画" width="560"></iframe>
-</div>
-</div>
-<!-- <div class="button-group">
-<a class="button button-demo" href="main_demo/main_demo.html"><i class="fas fa-gamepad"></i> デモプレイ</a>
-</div> -->
-</section>
-<section class="portfolio-section">
-<div class="section-title">
-<span class="section-label">OVERVIEW</span>
-<h2>プロジェクト概要</h2>
-</div>
+  <header class="site-header">
+    <h1>タートルアドベンチャー</h1>
+    <h2>コード紹介 / Unity C# Code Showcase</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home・他作品</a></li>
+        <li><a href="main_project.html"><i class="fas fa-code"></i> コード紹介ページ</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <section class="portfolio-section project-hero">
+      <div class="section-title">
+        <span class="section-label">FEATURED PROJECT</span>
+        <h2>タートルアドベンチャー</h2>
+      </div>
 
+      <div class="project-tech">
+        <span>Unity</span>
+        <span>C#</span>
+        <span>Input System</span>
+        <span>CharacterController</span>
+        <span>Animator</span>
+        <span>NavMeshAgent</span>
+        <span>Cinemachine</span>
+        <span>状態遷移管理</span>
+        <span>セーブ・ロード</span>
+        <span>UIフォーカス制御</span>
+        <span>Nintendo Switch移植検証</span>
+      </div>
 
+      <p class="lead-text">
+        探索・戦闘・ギミック攻略を行う3Dアクションアドベンチャーです。<br />
+        現在はNintendo Switch向けを想定し、入力制御、UI操作、セーブ復帰、ポーズ中の操作制御を中心に改善しています。
+      </p>
 
-<p>・現在はSwitch向けを意識し、コントローラー操作、UIフォーカス、ポーズ、セーブポイント復帰などを重点的に改善しています。</p>
-<p>・実装では、プレイヤー操作、敵AI、ステージ遷移、セーブ・ロード、UI、サウンド、イベント進行など、ゲームとして必要な基盤を一通り構築しました。</p>
-<p>・2023年5月から個人開発を開始し、制作休止期間を除いて累計800時間以上を制作に費やしています。<br />企画、設計、実装、検証、改善まで一人で担当しています。</p>
-<p>・本作は、カメ型の主人公を操作してフィールドを探索する3Dアクションアドベンチャーです。<br />戦闘、鍵付き扉、破壊可能オブジェクトなどを組み合わせて進行します。</p>
-<div class="info-grid">
-<div class="info-card">
-<h3><i class="fas fa-lightbulb"></i> 開発目的</h3>
+      <div class="media-grid">
+        <div class="media-card vertical-media">
+          <span class="media-label">デモプレイ動画（2026/5/30時点）</span>
+          <iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""
+            frameborder="0"
+            height="315"
+            referrerpolicy="strict-origin-when-cross-origin"
+            src="https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM"
+            title="デモプレイ動画"
+            width="560"></iframe>
+        </div>
 
-<p>Unityで3Dアクションゲームを作る実践力を高めるために制作を開始しました。</p><p>操作、敵AI、ギミック、UI、セーブ、サウンドを段階的に実装しています。</p></div>
-<div class="info-card">
-<h3><i class="fas fa-user-cog"></i> 担当範囲</h3>
+        <div class="media-card wide-media">
+          <span class="media-label">Switchでのテストプレイ（2025/8/11時点）</span>
+          <iframe
+            allow="autoplay"
+            allowfullscreen=""
+            height="315"
+            src="https://www.youtube.com/embed/Kh-J6cAp7Sg?si=3i33ctn1SQk-4mPD"
+            title="Switch版テストプレイ動画"
+            width="560"></iframe>
+        </div>
+      </div>
+    </section>
 
-<p>企画、仕様検討、C#実装、Unity組み込み、UI調整、演出、テストを一人で担当しています。</p><p>一部素材は外部アセットを活用し、ゲーム進行に関わる主要ロジックは自作しています。</p></div>
-<div class="info-card">
-<h3><i class="fas fa-sync-alt"></i> 改善プロセス</h3>
+    <section class="portfolio-section">
+      <div class="section-title">
+        <span class="section-label">OVERVIEW</span>
+        <h2>プロジェクト概要</h2>
+      </div>
 
-<p>最小構成を作成した後、操作感、戦闘、探索、保存処理、UI遷移、演出を追加しました。</p><p>不具合発生時は原因を切り分け、再利用しやすい設計へ見直しています。</p></div>
-</div>
-</section>
-<section class="portfolio-section">
-<div class="section-title">
-<span class="section-label">DEVELOPMENT SCALE</span>
-<h2>開発規模・実装範囲</h2>
-</div>
-<p>単体機能だけでなく、プレイヤー操作・UI・セーブ・シーン遷移を接続している点を重視しています。<br />個人開発として、ゲームの基盤機能を一通り実装しています。</p><div class="info-grid">
-<div class="info-card">
-<h3><i class="fas fa-gamepad"></i> プレイヤー制御</h3>
-<p>
-            移動、ジャンプ、通常攻撃、ショット、遠距離攻撃、爆弾設置、ダッシュ、ガード、被ダメージ、
-            ノックバック、撃破、回復、奈落復帰、イベント移動を実装しています。
+      <p>
+        カメ型の主人公を操作してフィールドを探索し、戦闘、鍵付き扉、破壊可能オブジェクト、バトルルームなどを攻略して進行する3Dアクションアドベンチャーです。
+      </p>
+      <p>
+        2023年5月から個人開発を開始し、制作休止期間を除いて累計800時間以上を制作に費やしています。企画、仕様検討、設計、実装、Unity組み込み、検証、改善まで一人で担当しています。
+      </p>
+      <p>
+        現在はSwitch向けを意識し、コントローラー操作、UIフォーカス、ポーズ、セーブポイント復帰、シーン遷移時の演出などを重点的に改善しています。
+      </p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3><i class="fas fa-bullseye"></i> 開発目的</h3>
+          <p>
+            3Dアクションアドベンチャーに必要なプレイヤー制御、敵AI、ギミック、UI、セーブ、シーン遷移、サウンド制御を一通り実装し、ゲーム全体を破綻なく進行させる基盤を構築することを目的に制作しています。
           </p>
-</div>
-<div class="info-card">
-<h3><i class="fas fa-route"></i> 進行管理</h3>
-<p>
-            シーン遷移、スポーンポイント復帰、フィールド表示切替、セーブ・ロード、鍵・扉・宝箱などの進行状態保存を実装しています。
+          <p>
+            現在はNintendo Switchでのリリースを見据え、コントローラー操作、UIフォーカス、ポーズ中の入力制御、セーブ復帰時の整合性など、コンシューマー向けのプレイ体験を意識して改善を進めています。
           </p>
-</div>
-<div class="info-card">
-<h3><i class="fas fa-volume-up"></i> UX・演出</h3>
-<p>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-user-cog"></i> 担当範囲</h3>
+          <p>
+            企画、仕様検討、C#実装、Unity組み込み、UI調整、演出、テストを一人で担当しています。
+          </p>
+          <p>
+            3Dモデルや一部素材には外部アセットを活用していますが、プレイヤー制御、敵AI、セーブ・ロード、フィールド遷移、バトルルーム管理、UI操作制御など、ゲーム進行に関わる主要ロジックは自作しています。
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-sync-alt"></i> 改善プロセス</h3>
+          <p>
+            最小構成を作成した後、操作感、戦闘、探索、保存処理、UI遷移、演出を段階的に追加しました。
+          </p>
+          <p>
+            不具合発生時は原因を切り分け、処理の責務や復元タイミングを見直しながら、再利用しやすい設計へ改善しています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="section-title">
+        <span class="section-label">DEVELOPMENT SCALE</span>
+        <h2>開発規模・実装範囲</h2>
+      </div>
+
+      <p>
+        単体機能だけでなく、プレイヤー操作、UI、セーブ、シーン遷移、バトルルーム、演出を接続し、1本のゲームとして進行できる基盤を実装しています。
+      </p>
+      <p>
+        現在は、探索、戦闘、フィールド遷移、セーブ復帰、バトルルーム、報酬管理、ポーズメニュー、UIフォーカス制御まで実装済みです。今後はステージ構成、ボス戦、演出、Switch向け操作調整を中心に完成度を高めていく予定です。
+      </p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3><i class="fas fa-gamepad"></i> プレイヤー制御</h3>
+          <p>
+            移動、ジャンプ、攻撃、ショット、爆弾、ダッシュ、ガード、被ダメージ、撃破、回復、奈落復帰、イベント移動など、プレイヤーの基本挙動と状態遷移を管理しています。
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-route"></i> 進行管理</h3>
+          <p>
+            シーン遷移、スポーンポイント復帰、フィールド表示切替、セーブ・ロード、鍵・扉・宝箱・バトルルームなどの進行状態保存を実装しています。
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-volume-up"></i> UX・演出</h3>
+          <p>
             BGM切替、SE再生、フェード、ポーズメニュー、UIフォーカス、会話中の操作制御など、プレイ体験を支える処理を実装しています。
           </p>
-</div>
-</div>
-</section>
-<section class="portfolio-section">
-<div class="section-title">
-<span class="section-label">SOURCE CODE</span>
-<h2>GitHubリンク・コード紹介</h2>
-</div>
+        </div>
+      </div>
+    </section>
 
+    <section class="portfolio-section">
+      <div class="section-title">
+        <span class="section-label">SOURCE CODE</span>
+        <h2>GitHubリンク・コード紹介</h2>
+      </div>
 
-<p class="note-text">※公開用に一部整理して掲載しているため、実プロジェクトの全ファイルや制作履歴をすべて含むものではありません。</p><p>本作で実装した主要スクリプトを、コード確認用のGitHubリポジトリにまとめています。</p><div class="button-group">
-<a class="button" href="https://github.com/kosuke-Hanchan/KameAdventure" target="_blank"><i class="fab fa-github"></i> GitHubへ</a>
-</div>
-</section>
-<section class="portfolio-section code-showcase">
-<div class="section-title">
-<span class="section-label">CODE SHOWCASE</span>
-<h2>一部コード紹介</h2>
-</div>
-<p>中途採用向けに、単体機能の実装だけでなく「入力・状態・UI・セーブ・シーン遷移を接続し、ゲーム全体を成立させる処理」を中心に掲載しています。</p>
-<div class="media-card wide-media code-showcase-video">
-  <span class="media-label">デモプレイ動画</span>
-  <iframe
-    id="codeShowcaseVideo"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen=""
-    frameborder="0"
-    height="315"
-    referrerpolicy="strict-origin-when-cross-origin"
-    src="https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM"
-    title="デモプレイ動画"
-    width="560"></iframe>
-</div>
+      <p>
+        本作で実装した主要スクリプトを、コード確認用のGitHubリポジトリにまとめています。
+        特に、Player_ctrl、SaveDataManager、FieldZone、SceneTransitionTrigger、BattleRoomTrigger周辺では、入力、状態管理、セーブ復元、フィールド遷移、シーン遷移をどのように接続しているかを確認できます。
+      </p>
+      <p class="note-text">
+        ※公開用に一部整理して掲載しているため、実プロジェクトの全ファイルや制作履歴をすべて含むものではありません。
+      </p>
+      <div class="button-group">
+        <a class="button" href="https://github.com/kosuke-Hanchan/KameAdventure" target="_blank"><i class="fab fa-github"></i> GitHubへ</a>
+      </div>
+    </section>
 
+    <section class="portfolio-section code-showcase">
+      <div class="section-title">
+        <span class="section-label">CODE SHOWCASE</span>
+        <h2>一部コード紹介</h2>
+      </div>
 
-<div aria-label="コード紹介カテゴリ" class="tabs" role="tablist">
-<button aria-controls="tab1" aria-selected="true" class="tab-link active" data-tab="tab1" role="tab"><i class="fas fa-running"></i> プレイヤー制御</button>
-<button aria-controls="tab2" aria-selected="false" class="tab-link" data-tab="tab2" role="tab"><i class="fas fa-save"></i> セーブ・進行管理</button>
-<button aria-controls="tab3" aria-selected="false" class="tab-link" data-tab="tab3" role="tab"><i class="fas fa-route"></i> フィールド・遷移管理</button>
-<button aria-controls="tab4" aria-selected="false" class="tab-link" data-tab="tab4" role="tab"><i class="fas fa-door-open"></i> バトルルーム管理</button>
-</div>
+      <p>
+        中途採用向けに、単体機能の実装だけでなく「入力・状態・UI・セーブ・シーン遷移を接続し、ゲーム全体を成立させる処理」を中心に掲載しています。
+      </p>
 
-<div class="tab-content" id="tab1" role="tabpanel">
-<h3>● プレイヤー制御</h3>
-<div class="tab-video-link">
-  <button type="button" class="video-jump-button active" data-video-start="10"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:10）</button>
-</div>
-<p>移動、攻撃、ショット、ガード、爆弾、ダッシュ、被ダメージなど、プレイヤーの基本挙動を管理しています。</p>
-<p>Input System、CharacterController、Animator、当たり判定を連携させ、状態に応じて操作可否を切り替えています。</p>
-<div class="tech-points">
-<p><strong>技術ポイント：</strong></p>
-<ul>
-<li>PlayerStateによる移動・攻撃・被ダメージ・会話中の状態管理</li>
-<li>ActionTypeによる複数アクションの切替</li>
-<li>ActionMapの有効/無効化による入力制御</li>
-<li>スポーン演出、奈落復帰、セーブ復元との連携</li>
-</ul>
-</div>
-<div class="script-about">
-<p>個人開発のため実装効率も考慮しつつ、入力制御・アクション制御・ダメージ制御・復元処理を役割ごとに切り分け、後から拡張・分離しやすい構成を意識しています。</p>
-<p><strong>課題：</strong>複数アクションやイベント中の操作制限が増えると、入力受付と状態遷移が衝突しやすくなります。</p>
-<p><strong>対応：</strong>PlayerStateとActionTypeで状態を分け、入力、アニメーション、当たり判定、復帰処理を状態に応じて制御しています。</p>
-<p><strong>結果：</strong>探索、戦闘、会話、セーブ復帰など、場面ごとに必要な操作だけを受け付ける構成にしています。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/495ebefc5b2740320e020990b1892112.js"></script>
-</div>
-</div>
+      <div class="media-card wide-media code-showcase-video">
+        <span class="media-label">デモプレイ動画</span>
+        <iframe
+          id="codeShowcaseVideo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen=""
+          frameborder="0"
+          height="315"
+          referrerpolicy="strict-origin-when-cross-origin"
+          src="https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM"
+          title="デモプレイ動画"
+          width="560"></iframe>
+      </div>
 
-<div class="tab-content hidden" id="tab2" role="tabpanel">
-<h3>● セーブ・進行管理</h3>
-<div class="tab-video-link">
-  <button type="button" class="video-jump-button" data-video-start="36"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:36）</button>
-</div>
-<p>セーブスロット、現在シーン、スポーン地点、HP、アクションタイプ、各種進行フラグを保存・復元する処理です。</p>
-<p>プレイヤー単体ではなく、扉・宝箱・バトルルームなどの状態を含めて、ゲーム進行を破綻させないことを重視しています。</p>
-<div class="tech-points">
-<p><strong>技術ポイント：</strong></p>
-<ul>
-<li>セーブデータと実行中データを分けた管理</li>
-<li>最後にいたシーン・スポーン地点・フィールド情報の保存</li>
-<li>HPや選択中アクションタイプの復元</li>
-<li>鍵・扉・宝箱・報酬など、進行状態の保存に対応</li>
-</ul>
-</div>
-<div class="script-about">
-<p><strong>課題：</strong>セーブ復帰時に、プレイヤー位置だけでなく扉・宝箱・バトルルームなどの進行状態も一致させる必要がありました。</p>
-<p><strong>対応：</strong>保存データと実行中データを分け、現在シーン、スポーン地点、フィールド情報、進行フラグを復元対象として整理しました。</p>
-<p><strong>結果：</strong>ロード後も探索状況が破綻しにくく、ゲーム進行を継続できる構成にしています。</p>
-</div>
-<section class="script-section">
-<h4>SaveDataManager_src</h4>
-<div class="script-about">
-<p>セーブスロットの作成・読込・上書きを管理し、ゲーム内の現在状態を保存データへ反映します。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/9370323aa395b2d3a9197b7b77ad1ed1.js"></script>
-</div>
-</section>
-<section class="script-section">
-<h4>SaveData_src</h4>
-<div class="script-about">
-<p>保存対象となるHP、シーン名、スポーン地点、フィールド情報、進行フラグなどのデータ構造を定義しています。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/fdd1ce9b0ccd009e203417617c0ec2cc.js"></script>
-</div>
-</section>
-<section class="script-section">
-<h4>GameStateData_src</h4>
-<div class="script-about">
-<p>シーン間で引き継ぐ現在状態を保持し、ロード後の復元処理と連携させています。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/a6007ee677999dde6493f4b86880f709.js"></script>
-</div>
-</section>
-</div>
+      <div aria-label="コード紹介カテゴリ" class="tabs" role="tablist">
+        <button aria-controls="tab1" aria-selected="true" class="tab-link active" data-tab="tab1" role="tab"><i class="fas fa-running"></i> プレイヤー制御</button>
+        <button aria-controls="tab2" aria-selected="false" class="tab-link" data-tab="tab2" role="tab"><i class="fas fa-save"></i> セーブ・進行管理</button>
+        <button aria-controls="tab3" aria-selected="false" class="tab-link" data-tab="tab3" role="tab"><i class="fas fa-route"></i> フィールド・遷移管理</button>
+        <button aria-controls="tab4" aria-selected="false" class="tab-link" data-tab="tab4" role="tab"><i class="fas fa-door-open"></i> バトルルーム管理</button>
+      </div>
 
-<div class="tab-content hidden" id="tab3" role="tabpanel">
-<h3>● フィールド・遷移管理</h3>
-<div class="tab-video-link">
-  <button type="button" class="video-jump-button" data-video-start="48"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:48）</button>
-</div>
-<p>フィールド単位の表示切替、BGM・ライティング・フィールド名表示、シーン遷移、スポーン復帰を管理しています。</p>
-<p>エリア移動時の演出とロード後の復帰地点を連携させ、探索ゲームとして自然に進行できる構成にしています。</p>
-<div class="tech-points">
-<p><strong>技術ポイント：</strong></p>
-<ul>
-<li>FieldZoneによる表示フィールド・非表示フィールドの制御</li>
-<li>FieldManagerによるフィールド名、BGM、ライティングの切替</li>
-<li>SpawnPointによる復帰位置と向きの管理</li>
-<li>SceneTransitionTriggerによる遷移制御と連続発火防止</li>
-</ul>
-</div>
-<div class="script-about">
-<p><strong>課題：</strong>エリア移動、シーン遷移、ロード復帰が別々に動くと、表示フィールドやBGM、復帰地点がずれる可能性があります。</p>
-<p><strong>対応：</strong>FieldZone、FieldManager、SpawnPoint、SceneTransitionTriggerを連携させ、移動先に必要な情報を一貫して扱うようにしています。</p>
-<p><strong>結果：</strong>探索中のフィールド切替とシーン遷移後の復帰を自然につなげ、再開時の違和感を抑えています。</p>
-</div>
-<section class="script-section">
-<h4>FieldZone_src</h4>
-<div class="script-about">
-<p>フィールド単位で表示・非表示を切り替え、探索範囲の管理と負荷軽減を両立するための処理です。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/32e5e181c743a440bb40c0b5245647ed.js"></script>
-</div>
-</section>
-<section class="script-section">
-<h4>FieldManager_src</h4>
-<div class="script-about">
-<p>現在のフィールドに応じて、フィールド名表示、BGM、ライティングを切り替える管理処理です。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/54d6e8a14a73df8c7d20e41dca78a74e.js"></script>
-</div>
-</section>
-<section class="script-section">
-<h4>SpawnPoint_src</h4>
-<div class="script-about">
-<p>シーン遷移やロード後の復帰位置と向きを管理し、必要に応じてスポーン演出移動を行います。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/b60ccf332492afcbd3565d08f8b3c9be.js"></script>
-</div>
-</section>
-<section class="script-section">
-<h4>SceneTransitionTrigger_src</h4>
-<div class="script-about">
-<p>シーン遷移時のフェード、遷移先、スポーン地点を連携し、連続発火を防ぎながら移動処理を行います。</p>
-</div>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/ff67c37fe6134ecac6069d778a1e2803.js"></script>
-</div>
-</section>
-</div>
+      <div class="tab-content" id="tab1" role="tabpanel">
+        <h3>● プレイヤー制御</h3>
+        <div class="tab-video-link">
+          <button type="button" class="video-jump-button active" data-video-start="10"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:10）</button>
+        </div>
+        <p>
+          移動、攻撃、ショット、ガード、爆弾、ダッシュ、被ダメージなど、プレイヤーの基本挙動を管理しています。
+        </p>
+        <p>
+          Input System、CharacterController、Animator、当たり判定を連携させ、状態に応じて操作可否を切り替えています。
+        </p>
+        <div class="tech-points">
+          <p><strong>技術ポイント：</strong></p>
+          <ul>
+            <li>PlayerStateによる移動・攻撃・被ダメージ・会話中の状態管理</li>
+            <li>ActionTypeによる複数アクションの切替</li>
+            <li>ActionMapの有効/無効化による入力制御</li>
+            <li>スポーン演出、奈落復帰、セーブ復元との連携</li>
+          </ul>
+        </div>
+        <div class="script-about">
+          <p>
+            個人開発のため実装効率も考慮しつつ、入力制御・アクション制御・ダメージ制御・復元処理を役割ごとに切り分け、後から拡張・分離しやすい構成を意識しています。
+          </p>
+          <p><strong>課題：</strong>複数アクションやイベント中の操作制限が増えると、入力受付と状態遷移が衝突しやすくなります。</p>
+          <p><strong>対応：</strong>PlayerStateとActionTypeで状態を分け、入力、アニメーション、当たり判定、復帰処理を状態に応じて制御しています。</p>
+          <p><strong>結果：</strong>探索、戦闘、会話、セーブ復帰など、場面ごとに必要な操作だけを受け付ける構成にしています。</p>
+        </div>
+        <div class="gist-container">
+          <script src="https://gist.github.com/kosuke-Hanchan/495ebefc5b2740320e020990b1892112.js"></script>
+        </div>
+      </div>
 
-<div class="tab-content hidden" id="tab4" role="tabpanel">
-<h3>● バトルルーム管理</h3>
-<div class="tab-video-link">
-  <button type="button" class="video-jump-button" data-video-start="92"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（1:32）</button>
-</div>
-<p>バトルルームへの侵入、敵撃破判定、クリア後の報酬出現、クリア状態の保存を管理しています。</p>
-<p>戦闘・報酬・セーブ状態を一連の流れとして接続し、再訪時に同じ報酬が重複しないようにしています。</p>
-<div class="tech-points">
-<p><strong>技術ポイント：</strong></p>
-<ul>
-<li>部屋単位での戦闘開始・クリア判定</li>
-<li>敵撃破状態の監視と報酬出現処理</li>
-<li>報酬取得・部屋クリア状態の保存連携</li>
-<li>再訪時の状態復元による重複報酬防止</li>
-</ul>
-</div>
-<div class="script-about">
-<p><strong>課題：</strong>戦闘クリア後に報酬が重複出現したり、再訪時にクリア済み状態が戻らないと進行管理が破綻します。</p>
-<p><strong>対応：</strong>バトルルーム単位でクリア状態と報酬状態を管理し、セーブデータと連携して復元できるようにしています。</p>
-<p><strong>結果：</strong>戦闘、報酬、保存状態を一連の流れとして扱い、再訪時も自然な状態を維持できるようにしています。</p>
-</div>
-<section class="script-section">
-<h4>BattleRoomTrigger</h4>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/372265ca56245e13a2b1e073ec89e583.js"></script>
-</div>
-</section>
-<section class="script-section">
-<h4>EnemyDefeatRewardManager</h4>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/182f59eece5b309aa2007db63207ca5e.js"></script>
-</div>
-</section>
-</div>
-</section>
-<section class="portfolio-section">
-<div class="section-title">
-<span class="section-label">FOR RECRUITERS</span>
-<h2>中途採用向けに伝えたいこと</h2>
-</div>
-<p>
-  本ポートフォリオでは、Unity/C#による単体機能の実装だけでなく、入力、状態遷移、UI、セーブ、シーン遷移、演出を接続し、1本のゲームとして成立させるための実装力を重視して掲載しています。
-</p>
-<p>
-  個人開発ではありますが、仕様追加に伴う設計見直し、不具合原因の切り分け、プレイヤー体験を損なわない操作感・UI・演出の改善を継続して行っています。
-</p>
-<div class="info-grid">
-<div class="info-card">
-<h3><i class="fas fa-code-branch"></i> 実装で意識していること</h3>
-<p>
-  入力制御、状態管理、セーブ復元、シーン遷移など、ゲーム中で不具合が起きやすい処理を接続し、場面ごとに破綻しない動作になるよう確認しながら実装しています。
-</p>
-</div>
-<div class="info-card">
-<h3><i class="fas fa-user-check"></i> プレイヤー体験への配慮</h3>
-<p>
-  UIフォーカス、ポーズ中の操作制限、フェード、SE、スポーン演出など、プレイヤーが迷わず自然に操作できることを重視して調整しています。
-</p>
-</div>
-<div class="info-card">
-<h3><i class="fas fa-tools"></i> 今後の改善方針</h3>
-<p>
-  現在は個人開発の実装効率も考慮した構成ですが、今後は入力制御、アクション制御、ダメージ処理、セーブ復元処理の責務をさらに明確化し、保守性を高めていく予定です。
-</p>
-</div>
-</div>
-<p>
-  実務では、仕様を理解して実装へ落とし込み、品質を意識して改善を重ねられるゲーム開発者として貢献したいと考えています。
-</p>
-</section>
-</main>
-<footer>
-<p>© 2024–2026 半田 滉介 - Portfolio</p>
-</footer>
-<script>
+      <div class="tab-content hidden" id="tab2" role="tabpanel">
+        <h3>● セーブ・進行管理</h3>
+        <div class="tab-video-link">
+          <button type="button" class="video-jump-button" data-video-start="36"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:36）</button>
+        </div>
+        <p>
+          セーブスロット、現在シーン、スポーン地点、HP、アクションタイプ、各種進行フラグを保存・復元する処理です。
+        </p>
+        <p>
+          プレイヤー単体ではなく、扉・宝箱・バトルルームなどの状態を含めて、ゲーム進行を破綻させないことを重視しています。
+        </p>
+        <div class="tech-points">
+          <p><strong>技術ポイント：</strong></p>
+          <ul>
+            <li>セーブデータと実行中データを分けた管理</li>
+            <li>最後にいたシーン・スポーン地点・フィールド情報の保存</li>
+            <li>HPや選択中アクションタイプの復元</li>
+            <li>鍵・扉・宝箱・報酬など、進行状態の保存に対応</li>
+          </ul>
+        </div>
+        <div class="script-about">
+          <p><strong>課題：</strong>セーブ復帰時に、プレイヤー位置だけでなく扉・宝箱・バトルルームなどの進行状態も一致させる必要がありました。</p>
+          <p><strong>対応：</strong>保存データと実行中データを分け、現在シーン、スポーン地点、フィールド情報、進行フラグを復元対象として整理しました。</p>
+          <p><strong>結果：</strong>ロード後も探索状況が破綻しにくく、ゲーム進行を継続できる構成にしています。</p>
+        </div>
+
+        <section class="script-section">
+          <h4>SaveDataManager_src</h4>
+          <div class="script-about">
+            <p>セーブスロットの作成・読込・上書きを管理し、ゲーム内の現在状態を保存データへ反映します。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/9370323aa395b2d3a9197b7b77ad1ed1.js"></script>
+          </div>
+        </section>
+
+        <section class="script-section">
+          <h4>SaveData_src</h4>
+          <div class="script-about">
+            <p>保存対象となるHP、シーン名、スポーン地点、フィールド情報、進行フラグなどのデータ構造を定義しています。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/fdd1ce9b0ccd009e203417617c0ec2cc.js"></script>
+          </div>
+        </section>
+
+        <section class="script-section">
+          <h4>GameStateData_src</h4>
+          <div class="script-about">
+            <p>シーン間で引き継ぐ現在状態を保持し、ロード後の復元処理と連携させています。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/a6007ee677999dde6493f4b86880f709.js"></script>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-content hidden" id="tab3" role="tabpanel">
+        <h3>● フィールド・遷移管理</h3>
+        <div class="tab-video-link">
+          <button type="button" class="video-jump-button" data-video-start="48"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:48）</button>
+        </div>
+        <p>
+          フィールド単位の表示切替、BGM・ライティング・フィールド名表示、シーン遷移、スポーン復帰を管理しています。
+        </p>
+        <p>
+          エリア移動時の演出とロード後の復帰地点を連携させ、探索ゲームとして自然に進行できる構成にしています。
+        </p>
+        <div class="tech-points">
+          <p><strong>技術ポイント：</strong></p>
+          <ul>
+            <li>FieldZoneによる表示フィールド・非表示フィールドの制御</li>
+            <li>FieldManagerによるフィールド名、BGM、ライティングの切替</li>
+            <li>SpawnPointによる復帰位置と向きの管理</li>
+            <li>SceneTransitionTriggerによる遷移制御と連続発火防止</li>
+          </ul>
+        </div>
+        <div class="script-about">
+          <p><strong>課題：</strong>エリア移動、シーン遷移、ロード復帰が別々に動くと、表示フィールドやBGM、復帰地点がずれる可能性があります。</p>
+          <p><strong>対応：</strong>FieldZone、FieldManager、SpawnPoint、SceneTransitionTriggerを連携させ、移動先に必要な情報を一貫して扱うようにしています。</p>
+          <p><strong>結果：</strong>探索中のフィールド切替とシーン遷移後の復帰を自然につなげ、再開時の違和感を抑えています。</p>
+        </div>
+
+        <section class="script-section">
+          <h4>FieldZone_src</h4>
+          <div class="script-about">
+            <p>フィールド単位で表示・非表示を切り替え、探索範囲の管理と負荷軽減を両立するための処理です。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/32e5e181c743a440bb40c0b5245647ed.js"></script>
+          </div>
+        </section>
+
+        <section class="script-section">
+          <h4>FieldManager_src</h4>
+          <div class="script-about">
+            <p>現在のフィールドに応じて、フィールド名表示、BGM、ライティングを切り替える管理処理です。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/54d6e8a14a73df8c7d20e41dca78a74e.js"></script>
+          </div>
+        </section>
+
+        <section class="script-section">
+          <h4>SpawnPoint_src</h4>
+          <div class="script-about">
+            <p>シーン遷移やロード後の復帰位置と向きを管理し、必要に応じてスポーン演出移動を行います。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/b60ccf332492afcbd3565d08f8b3c9be.js"></script>
+          </div>
+        </section>
+
+        <section class="script-section">
+          <h4>SceneTransitionTrigger_src</h4>
+          <div class="script-about">
+            <p>シーン遷移時のフェード、遷移先、スポーン地点を連携し、連続発火を防ぎながら移動処理を行います。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/ff67c37fe6134ecac6069d778a1e2803.js"></script>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-content hidden" id="tab4" role="tabpanel">
+        <h3>● バトルルーム管理</h3>
+        <div class="tab-video-link">
+          <button type="button" class="video-jump-button" data-video-start="92"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（1:32）</button>
+        </div>
+        <p>
+          バトルルームへの侵入、敵撃破判定、クリア後の報酬出現、クリア状態の保存を管理しています。
+        </p>
+        <p>
+          戦闘・報酬・セーブ状態を一連の流れとして接続し、再訪時に同じ報酬が重複しないようにしています。
+        </p>
+        <div class="tech-points">
+          <p><strong>技術ポイント：</strong></p>
+          <ul>
+            <li>部屋単位での戦闘開始・クリア判定</li>
+            <li>敵撃破状態の監視と報酬出現処理</li>
+            <li>報酬取得・部屋クリア状態の保存連携</li>
+            <li>再訪時の状態復元による重複報酬防止</li>
+          </ul>
+        </div>
+        <div class="script-about">
+          <p><strong>課題：</strong>戦闘クリア後に報酬が重複出現したり、再訪時にクリア済み状態が戻らないと進行管理が破綻します。</p>
+          <p><strong>対応：</strong>バトルルーム単位でクリア状態と報酬状態を管理し、セーブデータと連携して復元できるようにしています。</p>
+          <p><strong>結果：</strong>戦闘、報酬、保存状態を一連の流れとして扱い、再訪時も自然な状態を維持できるようにしています。</p>
+        </div>
+
+        <section class="script-section">
+          <h4>BattleRoomTrigger</h4>
+          <div class="script-about">
+            <p>バトルルームへの侵入判定、戦闘開始、部屋の封鎖・解放、クリア状態の保存連携を管理します。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/372265ca56245e13a2b1e073ec89e583.js"></script>
+          </div>
+        </section>
+
+        <section class="script-section">
+          <h4>EnemyDefeatRewardManager</h4>
+          <div class="script-about">
+            <p>敵の撃破状態を監視し、全敵撃破後の報酬出現、取得状態、再訪時の復元処理を管理します。</p>
+          </div>
+          <div class="gist-container">
+            <script src="https://gist.github.com/kosuke-Hanchan/182f59eece5b309aa2007db63207ca5e.js"></script>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="section-title">
+        <span class="section-label">FOR RECRUITERS</span>
+        <h2>中途採用向けに伝えたいこと</h2>
+      </div>
+
+      <p>
+        本ポートフォリオでは、Unity/C#による単体機能の実装だけでなく、入力、状態遷移、UI、セーブ、シーン遷移、演出を接続し、1本のゲームとして成立させるための実装力を重視して掲載しています。
+      </p>
+      <p>
+        個人開発ではありますが、仕様追加に伴う設計見直し、不具合原因の切り分け、プレイヤー体験を損なわない操作感・UI・演出の改善を継続して行っています。
+      </p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3><i class="fas fa-code-branch"></i> 実装で意識していること</h3>
+          <p>
+            入力制御、状態管理、セーブ復元、シーン遷移など、ゲーム中で不具合が起きやすい処理を接続し、場面ごとに破綻しない動作になるよう確認しながら実装しています。
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-user-check"></i> プレイヤー体験への配慮</h3>
+          <p>
+            UIフォーカス、ポーズ中の操作制限、フェード、SE、スポーン演出など、プレイヤーが迷わず自然に操作できることを重視して調整しています。
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-tools"></i> 今後の改善方針</h3>
+          <p>
+            現在は個人開発の実装効率も考慮した構成ですが、今後は入力制御、アクション制御、ダメージ処理、セーブ復元処理の責務をさらに明確化し、保守性を高めていく予定です。
+          </p>
+        </div>
+      </div>
+
+      <p>
+        実務では、仕様を理解して実装へ落とし込み、品質を意識して改善を重ねられるゲーム開発者として貢献したいと考えています。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024–2026 半田 滉介 - Portfolio</p>
+  </footer>
+
+  <script>
     document.querySelectorAll('.tab-link').forEach(tab => {
       tab.addEventListener('click', function() {
         const target = this.getAttribute('data-tab');
+
         document.querySelectorAll('.tab-link').forEach(link => {
           link.classList.remove('active');
           link.setAttribute('aria-selected', 'false');
         });
-        document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.add('hidden');
+        });
+
         this.classList.add('active');
         this.setAttribute('aria-selected', 'true');
         document.getElementById(target).classList.remove('hidden');
       });
     });
 
-    // デモ動画を指定秒数から再生する。
     const codeShowcaseVideo = document.getElementById('codeShowcaseVideo');
     const videoBaseUrl = 'https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM';
 
     document.querySelectorAll('.video-jump-button').forEach(button => {
       button.addEventListener('click', function() {
         const startSeconds = Number(this.dataset.videoStart || 0);
-        document.querySelectorAll('.video-jump-button').forEach(item => item.classList.remove('active'));
+
+        document.querySelectorAll('.video-jump-button').forEach(item => {
+          item.classList.remove('active');
+        });
+
         this.classList.add('active');
         codeShowcaseVideo.src = `${videoBaseUrl}&start=${startSeconds}&autoplay=1`;
 
