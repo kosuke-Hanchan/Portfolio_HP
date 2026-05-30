@@ -38,7 +38,7 @@
 <span>UIフォーカス制御</span>
 <span>Nintendo Switch移植検証</span>
 </div>
-<p class="lead-text">探索・戦闘・ギミック攻略を行う3Dアクションアドベンチャーです。現在はNintendo Switch向けを想定し、入力制御・UI操作・セーブ復帰を中心に改善しています。</p>
+<p class="lead-text">探索・戦闘・ギミック攻略を行う3Dアクションアドベンチャーです。<br />現在はNintendo Switch向けを想定し、入力制御・UI操作・セーブ復帰を中心に改善しています。</p>
 <div class="media-grid">
 <div class="media-card vertical-media">
 <span class="media-label">デモプレイ動画（2026/5/30時点）</span>
@@ -62,7 +62,11 @@
 
 
 
-<p>現在はSwitch向けを意識し、コントローラー操作、UIフォーカス、ポーズ、セーブポイント復帰などを重点的に改善しています。</p><p>実装では、プレイヤー操作、敵AI、ステージ遷移、セーブ・ロード、UI、サウンド、イベント進行など、ゲームとして必要な基盤を一通り構築しました。</p><p>2023年5月から個人開発を開始し、制作休止期間を除いて累計800時間以上を制作に費やしています。企画、設計、実装、検証、改善まで一人で担当しています。</p><p>本作は、カメ型の主人公を操作してフィールドを探索する3Dアクションアドベンチャーです。戦闘、鍵付き扉、破壊可能オブジェクトなどを組み合わせて進行します。</p><div class="info-grid">
+<p>・現在はSwitch向けを意識し、コントローラー操作、UIフォーカス、ポーズ、セーブポイント復帰などを重点的に改善しています。</p>
+<p>・実装では、プレイヤー操作、敵AI、ステージ遷移、セーブ・ロード、UI、サウンド、イベント進行など、ゲームとして必要な基盤を一通り構築しました。</p>
+<p>・2023年5月から個人開発を開始し、制作休止期間を除いて累計800時間以上を制作に費やしています。<br />企画、設計、実装、検証、改善まで一人で担当しています。</p>
+<p>・本作は、カメ型の主人公を操作してフィールドを探索する3Dアクションアドベンチャーです。<br />戦闘、鍵付き扉、破壊可能オブジェクトなどを組み合わせて進行します。</p>
+<div class="info-grid">
 <div class="info-card">
 <h3><i class="fas fa-lightbulb"></i> 開発目的</h3>
 
@@ -82,7 +86,7 @@
 <span class="section-label">DEVELOPMENT SCALE</span>
 <h2>開発規模・実装範囲</h2>
 </div>
-<p>単体機能だけでなく、プレイヤー操作・UI・セーブ・シーン遷移を接続している点を重視しています。</p><p>個人開発として、ゲームの基盤機能を一通り実装しています。</p><div class="info-grid">
+<p>単体機能だけでなく、プレイヤー操作・UI・セーブ・シーン遷移を接続している点を重視しています。<br />個人開発として、ゲームの基盤機能を一通り実装しています。</p><div class="info-grid">
 <div class="info-card">
 <h3><i class="fas fa-gamepad"></i> プレイヤー制御</h3>
 <p>
@@ -120,7 +124,7 @@
 <span class="section-label">CODE SHOWCASE</span>
 <h2>一部コード紹介</h2>
 </div>
-<p>中途転職用として、単体機能ではなく「ゲーム全体を成立させる処理」を中心に掲載しています。</p>
+<p>中途採用向けに、単体機能の実装だけでなく「入力・状態・UI・セーブ・シーン遷移を接続し、ゲーム全体を成立させる処理」を中心に掲載しています。</p>
 <div class="media-card wide-media code-showcase-video">
   <span class="media-label">デモプレイ動画</span>
   <iframe
@@ -160,7 +164,10 @@
 </ul>
 </div>
 <div class="script-about">
-<p>個人開発では実装速度を優先して一部処理を集約していますが、入力制御・アクション制御・ダメージ制御・復元処理を分割可能な単位として整理しています。</p>
+<p>個人開発のため実装効率も考慮しつつ、入力制御・アクション制御・ダメージ制御・復元処理を役割ごとに切り分け、後から拡張・分離しやすい構成を意識しています。</p>
+<p><strong>課題：</strong>複数アクションやイベント中の操作制限が増えると、入力受付と状態遷移が衝突しやすくなります。</p>
+<p><strong>対応：</strong>PlayerStateとActionTypeで状態を分け、入力、アニメーション、当たり判定、復帰処理を状態に応じて制御しています。</p>
+<p><strong>結果：</strong>探索、戦闘、会話、セーブ復帰など、場面ごとに必要な操作だけを受け付ける構成にしています。</p>
 </div>
 <div class="gist-container">
 <script src="https://gist.github.com/kosuke-Hanchan/495ebefc5b2740320e020990b1892112.js"></script>
@@ -182,6 +189,11 @@
 <li>HPや選択中アクションタイプの復元</li>
 <li>鍵・扉・宝箱・報酬など、進行状態の保存に対応</li>
 </ul>
+</div>
+<div class="script-about">
+<p><strong>課題：</strong>セーブ復帰時に、プレイヤー位置だけでなく扉・宝箱・バトルルームなどの進行状態も一致させる必要がありました。</p>
+<p><strong>対応：</strong>保存データと実行中データを分け、現在シーン、スポーン地点、フィールド情報、進行フラグを復元対象として整理しました。</p>
+<p><strong>結果：</strong>ロード後も探索状況が破綻しにくく、ゲーム進行を継続できる構成にしています。</p>
 </div>
 <section class="script-section">
 <h4>SaveDataManager_src</h4>
@@ -228,26 +240,43 @@
 <li>SceneTransitionTriggerによる遷移制御と連続発火防止</li>
 </ul>
 </div>
+<div class="script-about">
+<p><strong>課題：</strong>エリア移動、シーン遷移、ロード復帰が別々に動くと、表示フィールドやBGM、復帰地点がずれる可能性があります。</p>
+<p><strong>対応：</strong>FieldZone、FieldManager、SpawnPoint、SceneTransitionTriggerを連携させ、移動先に必要な情報を一貫して扱うようにしています。</p>
+<p><strong>結果：</strong>探索中のフィールド切替とシーン遷移後の復帰を自然につなげ、再開時の違和感を抑えています。</p>
+</div>
 <section class="script-section">
 <h4>FieldZone_src</h4>
+<div class="script-about">
+<p>フィールド単位で表示・非表示を切り替え、探索範囲の管理と負荷軽減を両立するための処理です。</p>
+</div>
 <div class="gist-container">
 <script src="https://gist.github.com/kosuke-Hanchan/32e5e181c743a440bb40c0b5245647ed.js"></script>
 </div>
 </section>
 <section class="script-section">
 <h4>FieldManager_src</h4>
+<div class="script-about">
+<p>現在のフィールドに応じて、フィールド名表示、BGM、ライティングを切り替える管理処理です。</p>
+</div>
 <div class="gist-container">
 <script src="https://gist.github.com/kosuke-Hanchan/54d6e8a14a73df8c7d20e41dca78a74e.js"></script>
 </div>
 </section>
 <section class="script-section">
 <h4>SpawnPoint_src</h4>
+<div class="script-about">
+<p>シーン遷移やロード後の復帰位置と向きを管理し、必要に応じてスポーン演出移動を行います。</p>
+</div>
 <div class="gist-container">
 <script src="https://gist.github.com/kosuke-Hanchan/b60ccf332492afcbd3565d08f8b3c9be.js"></script>
 </div>
 </section>
 <section class="script-section">
 <h4>SceneTransitionTrigger_src</h4>
+<div class="script-about">
+<p>シーン遷移時のフェード、遷移先、スポーン地点を連携し、連続発火を防ぎながら移動処理を行います。</p>
+</div>
 <div class="gist-container">
 <script src="https://gist.github.com/kosuke-Hanchan/ff67c37fe6134ecac6069d778a1e2803.js"></script>
 </div>
@@ -270,6 +299,11 @@
 <li>再訪時の状態復元による重複報酬防止</li>
 </ul>
 </div>
+<div class="script-about">
+<p><strong>課題：</strong>戦闘クリア後に報酬が重複出現したり、再訪時にクリア済み状態が戻らないと進行管理が破綻します。</p>
+<p><strong>対応：</strong>バトルルーム単位でクリア状態と報酬状態を管理し、セーブデータと連携して復元できるようにしています。</p>
+<p><strong>結果：</strong>戦闘、報酬、保存状態を一連の流れとして扱い、再訪時も自然な状態を維持できるようにしています。</p>
+</div>
 <section class="script-section">
 <h4>BattleRoomTrigger</h4>
 <div class="gist-container">
@@ -289,8 +323,35 @@
 <span class="section-label">FOR RECRUITERS</span>
 <h2>中途採用向けに伝えたいこと</h2>
 </div>
-
-
+<p>
+  本ポートフォリオでは、Unity/C#による単体機能の実装だけでなく、入力、状態遷移、UI、セーブ、シーン遷移、演出を接続し、1本のゲームとして成立させるための実装力を重視して掲載しています。
+</p>
+<p>
+  個人開発ではありますが、仕様追加に伴う設計見直し、不具合原因の切り分け、プレイヤー体験を損なわない操作感・UI・演出の改善を継続して行っています。
+</p>
+<div class="info-grid">
+<div class="info-card">
+<h3><i class="fas fa-code-branch"></i> 実装で意識していること</h3>
+<p>
+  入力制御、状態管理、セーブ復元、シーン遷移など、ゲーム中で不具合が起きやすい処理を接続し、場面ごとに破綻しない動作になるよう確認しながら実装しています。
+</p>
+</div>
+<div class="info-card">
+<h3><i class="fas fa-user-check"></i> プレイヤー体験への配慮</h3>
+<p>
+  UIフォーカス、ポーズ中の操作制限、フェード、SE、スポーン演出など、プレイヤーが迷わず自然に操作できることを重視して調整しています。
+</p>
+</div>
+<div class="info-card">
+<h3><i class="fas fa-tools"></i> 今後の改善方針</h3>
+<p>
+  現在は個人開発の実装効率も考慮した構成ですが、今後は入力制御、アクション制御、ダメージ処理、セーブ復元処理の責務をさらに明確化し、保守性を高めていく予定です。
+</p>
+</div>
+</div>
+<p>
+  実務では、仕様を理解して実装へ落とし込み、品質を意識して改善を重ねられるゲーム開発者として貢献したいと考えています。
+</p>
 </section>
 </main>
 <footer>
