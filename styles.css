@@ -516,7 +516,7 @@ footer {
     }
 }
 
-/* ===== 邏ｹ莉九�繝ｼ繧ｸ繝懊ち繝ｳ蠑ｷ隱ｿ繧ｹ繧ｿ繧､繝ｫ ===== */
+/* ===== 驍擾ｽｹ闔我ｹ晢ｿｽ郢晢ｽｼ郢ｧ�ｸ郢晄㈱縺｡郢晢ｽｳ陟托ｽｷ髫ｱ�ｿ郢ｧ�ｹ郢ｧ�ｿ郢ｧ�､郢晢ｽｫ ===== */
 .button-hero {
     position: relative;
     overflow: hidden;
@@ -599,7 +599,7 @@ a.button-hero:hover {
     }
 }
 
-/* 蜍輔″繧呈椛縺医◆縺�Θ繝ｼ繧ｶ繝ｼ蜷代￠縺ｫ貂幃� */
+/* 陷崎ｼ披ｳ郢ｧ蜻域､帷ｸｺ蛹ｻ笳�ｸｺ�ｽﾎ倡ｹ晢ｽｼ郢ｧ�ｶ郢晢ｽｼ陷ｷ莉｣��邵ｺ�ｫ雋ょｹδ�ｽ */
 @media (prefers-reduced-motion: reduce) {
     .button-hero,
     .button-hero::before {
@@ -615,9 +615,9 @@ a.button-hero:hover {
     }
 }
 
-/* ===== 繝ｩ繝吶Ν莉倥″谿ｵ關ｽ縺ｮ隕冶ｪ肴ｧ謾ｹ蝟� =====
-   縲後ご繝ｼ繝�讎りｦ�ｼ壹阪碁幕逋ｺ逶ｮ逧�ｼ壹阪↑縺ｩ縺ｮ繝ｩ繝吶Ν繧堤峡遶九＠縺溯｡後↓縺励�
-   谿ｵ關ｽ蜷悟｣ｫ縺ｮ蛹ｺ蛻�ｊ繧呈�遒ｺ縺ｫ縺吶ｋ */
+/* ===== 郢晢ｽｩ郢晏生ﾎ晁脂蛟･窶ｳ隹ｿ�ｵ髣懶ｽｽ邵ｺ�ｮ髫募��ｪ閧ｴﾂ�ｧ隰ｾ�ｹ陜滂ｿｽ =====
+   邵ｲ蠕後＃郢晢ｽｼ郢晢ｿｽ隶弱ｊ�ｦ�ｽ�ｼ螢ｹﾂ髦ｪﾂ遒∝ｹ暮具ｽｺ騾ｶ�ｮ騾ｧ�ｽ�ｼ螢ｹﾂ髦ｪ竊醍ｸｺ�ｩ邵ｺ�ｮ郢晢ｽｩ郢晏生ﾎ晉ｹｧ蝣､蟲｡驕ｶ荵晢ｼ�邵ｺ貅ｯ�｡蠕娯�邵ｺ蜉ｱﾂ�ｽ
+   隹ｿ�ｵ髣懶ｽｽ陷ｷ謔滂ｽ｣�ｫ邵ｺ�ｮ陋ｹ�ｺ陋ｻ�ｽ�顔ｹｧ蜻茨ｿｽ驕抵ｽｺ邵ｺ�ｫ邵ｺ蜷ｶ�� */
 .project-item p,
 .featured-project p {
     position: relative;
@@ -632,7 +632,7 @@ a.button-hero:hover {
     border-left-color: var(--color-primary);
 }
 
-/* 谿ｵ關ｽ縺ｮ蜈磯�ｭ縺ｫ縺ゅｋ <strong>�医Λ繝吶Ν�峨ｒ迢ｬ遶玖｡後↓ */
+/* 隹ｿ�ｵ髣懶ｽｽ邵ｺ�ｮ陷育｣ｯ�ｽ�ｭ邵ｺ�ｫ邵ｺ繧�ｽ� <strong>�ｽ蛹ｻﾎ帷ｹ晏生ﾎ晢ｿｽ蟲ｨ�定ｿ｢�ｬ驕ｶ邇厄ｽ｡蠕娯� */
 .project-item p > strong:first-child,
 .featured-project p > strong:first-child {
     display: block;
@@ -643,7 +643,7 @@ a.button-hero:hover {
     letter-spacing: 0.04em;
 }
 
-/* 豕ｨ蜉帑ｽ懷刀繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ縺ｯ繧｢繧ｯ繧ｻ繝ｳ繝医き繝ｩ繝ｼ縺ｧ蠑ｷ隱ｿ */
+/* 雎包ｽｨ陷牙ｸ托ｽｽ諛ｷ蛻郢ｧ�ｻ郢ｧ�ｯ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ邵ｺ�ｯ郢ｧ�｢郢ｧ�ｯ郢ｧ�ｻ郢晢ｽｳ郢晏現縺咲ｹ晢ｽｩ郢晢ｽｼ邵ｺ�ｧ陟托ｽｷ髫ｱ�ｿ */
 .featured-project p > strong:first-child {
     color: var(--color-accent);
 }
@@ -652,28 +652,28 @@ a.button-hero:hover {
     border-left-color: var(--color-accent);
 }
 
-/* 谿ｵ關ｽ縺ｮ蟾ｦ繝懊�繝繝ｼ縺� update-date 縺ｪ縺ｩ縺ｫ縺九°繧峨↑縺�ｈ縺�↓縺吶ｋ */
+/* 隹ｿ�ｵ髣懶ｽｽ邵ｺ�ｮ陝ｾ�ｦ郢晄㈱�ｽ郢敖郢晢ｽｼ邵ｺ�ｽ update-date 邵ｺ�ｪ邵ｺ�ｩ邵ｺ�ｫ邵ｺ荵敖ｰ郢ｧ蟲ｨ竊醍ｸｺ�ｽ�育ｸｺ�ｽ竊鍋ｸｺ蜷ｶ�� */
 .update-date {
     border-left: none !important;
     padding-left: 0 !important;
 }
-/* 邏ｹ莉九�繝ｼ繧ｸ繝懊ち繝ｳ�壽枚蟄励�逋ｽ縲∵棧邱壹�閭梧勹縺ｫ縺ｪ縺倥�譏弱ｋ縺�が繝ｬ繝ｳ繧ｸ */
+/* 驍擾ｽｹ闔我ｹ晢ｿｽ郢晢ｽｼ郢ｧ�ｸ郢晄㈱縺｡郢晢ｽｳ�ｽ螢ｽ譫夊氛蜉ｱ�ｽ騾具ｽｽ邵ｲ竏ｵ譽ｧ驍ｱ螢ｹ�ｽ髢ｭ譴ｧ蜍ｹ邵ｺ�ｫ邵ｺ�ｪ邵ｺ蛟･�ｽ隴丞ｼｱ�狗ｸｺ�ｽ縺檎ｹ晢ｽｬ郢晢ｽｳ郢ｧ�ｸ */
 a.button.button-hero,
 a.button.button-hero:visited {
     color: #ffffff;
     border-color: #ffd08a;
 }
 
-/* 繝帙ヰ繝ｼ譎ゅ�蟆代＠譏弱ｋ縺上＠縺ｦ謚ｼ縺帙ｋ諢溘ｒ蜃ｺ縺� */
+/* 郢晏ｸ吶Σ郢晢ｽｼ隴弱ｅ�ｽ陝�ｻ｣��隴丞ｼｱ�狗ｸｺ荳奇ｼ�邵ｺ�ｦ隰夲ｽｼ邵ｺ蟶呻ｽ玖ｫ｢貅假ｽ定怎�ｺ邵ｺ�ｽ */
 a.button.button-hero:hover,
 a.button.button-hero:active {
     color: #ffffff;
     border-color: #ffffff;
 }
 
-/* ===== 繝�Δ繝励Ξ繧､繝懊ち繝ｳ蟆ら畑繧ｹ繧ｿ繧､繝ｫ =====
-   繧ｹ繝医い繝懊ち繝ｳ�亥､夜Κ繝ｪ繝ｳ繧ｯ�峨→蟾ｮ蛻･蛹悶＠縲√し繧､繝亥�縺ｧ螳滄圀縺ｫ驕翫∋繧�
-   荳逡ｪ萓｡蛟､縺ｮ鬮倥＞蟆守ｷ壹→縺励※蝪励ｊ縺､縺ｶ縺暦ｼ狗ｷ醍ｳｻ縺ｧ逶ｮ遶九◆縺帙ｋ */
+/* ===== 郢晢ｿｽﾎ皮ｹ晏干ﾎ樒ｹｧ�､郢晄㈱縺｡郢晢ｽｳ陝�ｉ逡醍ｹｧ�ｹ郢ｧ�ｿ郢ｧ�､郢晢ｽｫ =====
+   郢ｧ�ｹ郢晏現縺�ｹ晄㈱縺｡郢晢ｽｳ�ｽ莠･�､螟慚夂ｹ晢ｽｪ郢晢ｽｳ郢ｧ�ｯ�ｽ蟲ｨ竊定淦�ｮ陋ｻ�･陋ｹ謔ｶ��邵ｲ竏壹＠郢ｧ�､郢昜ｺ･�ｽ邵ｺ�ｧ陞ｳ貊�怙邵ｺ�ｫ鬩慕ｿｫ竏狗ｹｧ�ｽ
+   闕ｳﾂ騾｡�ｪ關難ｽ｡陋滂ｽ､邵ｺ�ｮ鬯ｮ蛟･�櫁氣螳茨ｽｷ螢ｹ竊堤ｸｺ蜉ｱ窶ｻ陜ｪ蜉ｱ�顔ｸｺ�､邵ｺ�ｶ邵ｺ證ｦ�ｼ迢暦ｽｷ驢搾ｽｳ�ｻ邵ｺ�ｧ騾ｶ�ｮ驕ｶ荵昶螺邵ｺ蟶呻ｽ� */
 .button-demo,
 a.button.button-demo {
     background-color: #16a085;
@@ -694,8 +694,8 @@ a.button.button-demo:hover {
 .button-demo i {
     font-size: 1.05em;
 }
-/* ===== 繧ｳ繝ｼ繝臥ｴｹ莉句虚逕ｻ繧ｸ繝｣繝ｳ繝� =====
-   荳驛ｨ繧ｳ繝ｼ繝臥ｴｹ莉九�繝�Δ蜍慕判縺ｨ縲∝推讖溯�縺ｮ蜀咲函菴咲ｽｮ繝懊ち繝ｳ繧呈紛縺医ｋ */
+/* ===== 郢ｧ�ｳ郢晢ｽｼ郢晁��ｴ�ｹ闔牙唱陌夐包ｽｻ郢ｧ�ｸ郢晢ｽ｣郢晢ｽｳ郢晢ｿｽ =====
+   闕ｳﾂ鬩幢ｽｨ郢ｧ�ｳ郢晢ｽｼ郢晁��ｴ�ｹ闔我ｹ晢ｿｽ郢晢ｿｽﾎ碑恪諷募愛邵ｺ�ｨ邵ｲ竏晄耳隶匁ｺｯ�ｽ邵ｺ�ｮ陷蜥ｲ蜃ｽ闖ｴ蜥ｲ�ｽ�ｮ郢晄㈱縺｡郢晢ｽｳ郢ｧ蜻育ｴ帷ｸｺ蛹ｻ�� */
 .code-showcase-video {
     width: 100%;
     margin: 0 0 22px;
@@ -766,8 +766,8 @@ button.video-jump-button.active {
 }
 
 
-/* ===== 蜍慕判繧ｸ繝｣繝ｳ繝励→繧ｿ繝悶�隕九◆逶ｮ繧貞�髮｢ =====
-   蜍慕判繧ｸ繝｣繝ｳ繝励�蟆上＆縺ｪ繧ｷ繝ｼ繝ｳ遘ｻ蜍輔メ繝��縲√ち繝悶�繧ｳ繝ｼ繝芽｡ｨ遉ｺ蛻�崛縺ｨ縺励※隕九○繧九� */
+/* ===== 陷肴�蛻､郢ｧ�ｸ郢晢ｽ｣郢晢ｽｳ郢晏干竊堤ｹｧ�ｿ郢晄じ�ｽ髫穂ｹ昶螺騾ｶ�ｮ郢ｧ雋橸ｿｽ鬮ｮ�｢ =====
+   陷肴�蛻､郢ｧ�ｸ郢晢ｽ｣郢晢ｽｳ郢晏干�ｽ陝�ｸ奇ｼ�ｸｺ�ｪ郢ｧ�ｷ郢晢ｽｼ郢晢ｽｳ驕假ｽｻ陷崎ｼ斐Γ郢晢ｿｽ�ｽ邵ｲ竏壹■郢晄じ�ｽ郢ｧ�ｳ郢晢ｽｼ郢晁歓�｡�ｨ驕会ｽｺ陋ｻ�ｽ蟠帷ｸｺ�ｨ邵ｺ蜉ｱ窶ｻ髫穂ｹ昶雷郢ｧ荵敖�ｽ */
 .video-jump-area {
     margin: 16px 0 26px;
     padding: 14px 16px;
@@ -860,8 +860,8 @@ button.video-jump-button.active {
 }
 
 
-/* ===== 繧ｿ繝門�縺ｮ蜍慕判蜀咲函繝懊ち繝ｳ =====
-   蜷�さ繝ｼ繝臥ｴｹ莉九ち繝門�縺ｫ縲∬ｩｲ蠖薙ョ繝｢繧ｷ繝ｼ繝ｳ縺ｸ遘ｻ蜍輔☆繧九�繧ｿ繝ｳ繧帝�鄂ｮ縺吶ｋ縲� */
+/* ===== 郢ｧ�ｿ郢晞摩�ｽ邵ｺ�ｮ陷肴�蛻､陷蜥ｲ蜃ｽ郢晄㈱縺｡郢晢ｽｳ =====
+   陷ｷ�ｽ縺慕ｹ晢ｽｼ郢晁��ｴ�ｹ闔我ｹ昴■郢晞摩�ｽ邵ｺ�ｫ邵ｲ竏ｬ�ｩ�ｲ陟冶侭繝ｧ郢晢ｽ｢郢ｧ�ｷ郢晢ｽｼ郢晢ｽｳ邵ｺ�ｸ驕假ｽｻ陷崎ｼ披�郢ｧ荵晢ｿｽ郢ｧ�ｿ郢晢ｽｳ郢ｧ蟶晢ｿｽ驗ゑｽｮ邵ｺ蜷ｶ�狗ｸｲ�ｽ */
 .tab-video-link {
     margin: 6px 0 18px;
     padding: 12px 14px;
@@ -882,5 +882,89 @@ button.video-jump-button.active {
     .tab-video-link button.video-jump-button {
         width: 100%;
         min-width: 0;
+    }
+}
+
+/* ===== 髢狗匱讎りｦ√き繝ｼ繝峨�隱ｭ縺ｿ繧�☆縺戊ｪｿ謨ｴ ===== */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+    align-items: stretch;
+}
+
+.info-card {
+    background-color: var(--color-surface-soft);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.info-card:first-child {
+    grid-column: 1 / -1;
+}
+
+.info-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1e293b;
+    font-size: 1.28em;
+    margin-bottom: 14px;
+    line-height: 1.45;
+}
+
+.info-card h3 i {
+    color: var(--color-primary);
+    margin-right: 0;
+}
+
+.info-card p {
+    font-size: 1em;
+    line-height: 1.9;
+    margin-bottom: 14px;
+    color: #334155;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+.featured-project .info-card p,
+.project-hero .info-card p {
+    position: static;
+    padding: 0;
+    border-left: none;
+}
+
+.featured-project .info-card p:hover,
+.project-hero .info-card p:hover {
+    border-left: none;
+}
+
+.featured-project .info-card p > strong:first-child,
+.project-hero .info-card p > strong:first-child {
+    display: inline;
+    margin-bottom: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .info-card:first-child {
+        grid-column: auto;
+    }
+
+    .info-card {
+        padding: 18px;
     }
 }
