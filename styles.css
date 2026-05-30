@@ -516,7 +516,7 @@ footer {
     }
 }
 
-/* ===== 紹介ページボタン強調スタイル ===== */
+/* ===== 邏ｹ莉九�繝ｼ繧ｸ繝懊ち繝ｳ蠑ｷ隱ｿ繧ｹ繧ｿ繧､繝ｫ ===== */
 .button-hero {
     position: relative;
     overflow: hidden;
@@ -599,7 +599,7 @@ a.button-hero:hover {
     }
 }
 
-/* 動きを抑えたいユーザー向けに減速 */
+/* 蜍輔″繧呈椛縺医◆縺�Θ繝ｼ繧ｶ繝ｼ蜷代￠縺ｫ貂幃� */
 @media (prefers-reduced-motion: reduce) {
     .button-hero,
     .button-hero::before {
@@ -615,9 +615,9 @@ a.button-hero:hover {
     }
 }
 
-/* ===== ラベル付き段落の視認性改善 =====
-   「ゲーム概要：」「開発目的：」などのラベルを独立した行にし、
-   段落同士の区切りを明確にする */
+/* ===== 繝ｩ繝吶Ν莉倥″谿ｵ關ｽ縺ｮ隕冶ｪ肴ｧ謾ｹ蝟� =====
+   縲後ご繝ｼ繝�讎りｦ�ｼ壹阪碁幕逋ｺ逶ｮ逧�ｼ壹阪↑縺ｩ縺ｮ繝ｩ繝吶Ν繧堤峡遶九＠縺溯｡後↓縺励�
+   谿ｵ關ｽ蜷悟｣ｫ縺ｮ蛹ｺ蛻�ｊ繧呈�遒ｺ縺ｫ縺吶ｋ */
 .project-item p,
 .featured-project p {
     position: relative;
@@ -632,7 +632,7 @@ a.button-hero:hover {
     border-left-color: var(--color-primary);
 }
 
-/* 段落の先頭にある <strong>（ラベル）を独立行に */
+/* 谿ｵ關ｽ縺ｮ蜈磯�ｭ縺ｫ縺ゅｋ <strong>�医Λ繝吶Ν�峨ｒ迢ｬ遶玖｡後↓ */
 .project-item p > strong:first-child,
 .featured-project p > strong:first-child {
     display: block;
@@ -643,7 +643,7 @@ a.button-hero:hover {
     letter-spacing: 0.04em;
 }
 
-/* 注力作品セクションはアクセントカラーで強調 */
+/* 豕ｨ蜉帑ｽ懷刀繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ縺ｯ繧｢繧ｯ繧ｻ繝ｳ繝医き繝ｩ繝ｼ縺ｧ蠑ｷ隱ｿ */
 .featured-project p > strong:first-child {
     color: var(--color-accent);
 }
@@ -652,28 +652,28 @@ a.button-hero:hover {
     border-left-color: var(--color-accent);
 }
 
-/* 段落の左ボーダーが update-date などにかからないようにする */
+/* 谿ｵ關ｽ縺ｮ蟾ｦ繝懊�繝繝ｼ縺� update-date 縺ｪ縺ｩ縺ｫ縺九°繧峨↑縺�ｈ縺�↓縺吶ｋ */
 .update-date {
     border-left: none !important;
     padding-left: 0 !important;
 }
-/* 紹介ページボタン：文字は白、枠線は背景になじむ明るいオレンジ */
+/* 邏ｹ莉九�繝ｼ繧ｸ繝懊ち繝ｳ�壽枚蟄励�逋ｽ縲∵棧邱壹�閭梧勹縺ｫ縺ｪ縺倥�譏弱ｋ縺�が繝ｬ繝ｳ繧ｸ */
 a.button.button-hero,
 a.button.button-hero:visited {
     color: #ffffff;
     border-color: #ffd08a;
 }
 
-/* ホバー時は少し明るくして押せる感を出す */
+/* 繝帙ヰ繝ｼ譎ゅ�蟆代＠譏弱ｋ縺上＠縺ｦ謚ｼ縺帙ｋ諢溘ｒ蜃ｺ縺� */
 a.button.button-hero:hover,
 a.button.button-hero:active {
     color: #ffffff;
     border-color: #ffffff;
 }
 
-/* ===== デモプレイボタン専用スタイル =====
-   ストアボタン（外部リンク）と差別化し、サイト内で実際に遊べる
-   一番価値の高い導線として塗りつぶし＋緑系で目立たせる */
+/* ===== 繝�Δ繝励Ξ繧､繝懊ち繝ｳ蟆ら畑繧ｹ繧ｿ繧､繝ｫ =====
+   繧ｹ繝医い繝懊ち繝ｳ�亥､夜Κ繝ｪ繝ｳ繧ｯ�峨→蟾ｮ蛻･蛹悶＠縲√し繧､繝亥�縺ｧ螳滄圀縺ｫ驕翫∋繧�
+   荳逡ｪ萓｡蛟､縺ｮ鬮倥＞蟆守ｷ壹→縺励※蝪励ｊ縺､縺ｶ縺暦ｼ狗ｷ醍ｳｻ縺ｧ逶ｮ遶九◆縺帙ｋ */
 .button-demo,
 a.button.button-demo {
     background-color: #16a085;
@@ -693,4 +693,194 @@ a.button.button-demo:hover {
 
 .button-demo i {
     font-size: 1.05em;
+}
+/* ===== 繧ｳ繝ｼ繝臥ｴｹ莉句虚逕ｻ繧ｸ繝｣繝ｳ繝� =====
+   荳驛ｨ繧ｳ繝ｼ繝臥ｴｹ莉九�繝�Δ蜍慕判縺ｨ縲∝推讖溯�縺ｮ蜀咲函菴咲ｽｮ繝懊ち繝ｳ繧呈紛縺医ｋ */
+.code-showcase-video {
+    width: 100%;
+    margin: 0 0 22px;
+}
+
+.code-showcase-video iframe {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 8px auto 14px;
+}
+
+.video-jump-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.video-jump-button,
+button.video-jump-button {
+    cursor: pointer;
+    min-height: 48px;
+    padding: 10px 12px;
+    background-color: #ffffff;
+    color: var(--color-primary-dark);
+    border: 1px solid #d6eaf8;
+    border-radius: 10px;
+    font-size: 0.92em;
+    line-height: 1.35;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+}
+
+.video-jump-button:hover,
+button.video-jump-button:hover {
+    background-color: #e0f2fe;
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.18);
+}
+
+.video-jump-button.active,
+button.video-jump-button.active {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 18px rgba(52, 152, 219, 0.24);
+}
+
+@media (max-width: 900px) {
+    .video-jump-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .video-jump-list {
+        grid-template-columns: 1fr;
+    }
+
+    .video-jump-button,
+    button.video-jump-button {
+        width: 100%;
+    }
+}
+
+
+/* ===== 蜍慕判繧ｸ繝｣繝ｳ繝励→繧ｿ繝悶�隕九◆逶ｮ繧貞�髮｢ =====
+   蜍慕判繧ｸ繝｣繝ｳ繝励�蟆上＆縺ｪ繧ｷ繝ｼ繝ｳ遘ｻ蜍輔メ繝��縲√ち繝悶�繧ｳ繝ｼ繝芽｡ｨ遉ｺ蛻�崛縺ｨ縺励※隕九○繧九� */
+.video-jump-area {
+    margin: 16px 0 26px;
+    padding: 14px 16px;
+    background-color: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 14px;
+}
+
+.video-jump-title {
+    margin: 0 0 10px;
+    padding: 0;
+    border-left: none;
+    color: #9a3412;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+.video-jump-title i {
+    margin-right: 6px;
+}
+
+.video-jump-area .video-jump-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.video-jump-area .video-jump-button,
+.video-jump-area button.video-jump-button {
+    cursor: pointer;
+    min-height: auto;
+    padding: 8px 13px;
+    background-color: #ffffff;
+    color: #9a3412;
+    border: 1px solid #fdba74;
+    border-radius: 999px;
+    font-size: 0.86em;
+    font-weight: bold;
+    line-height: 1.25;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.video-jump-area .video-jump-button:hover,
+.video-jump-area button.video-jump-button:hover {
+    background-color: #ffedd5;
+    color: #7c2d12;
+    border-color: #fb923c;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(251, 146, 60, 0.18);
+}
+
+.video-jump-area .video-jump-button.active,
+.video-jump-area button.video-jump-button.active {
+    background-color: #f97316;
+    color: #ffffff;
+    border-color: #f97316;
+    box-shadow: 0 6px 14px rgba(249, 115, 22, 0.25);
+}
+
+.video-jump-note {
+    margin: 10px 0 0;
+    padding: 0;
+    border-left: none;
+    font-size: 0.82em;
+}
+
+.code-showcase .tabs {
+    margin-top: 18px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--color-border);
+}
+
+.code-showcase .tab-link {
+    min-height: 52px;
+}
+
+@media (max-width: 560px) {
+    .video-jump-area .video-jump-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .video-jump-area .video-jump-button,
+    .video-jump-area button.video-jump-button {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+
+/* ===== 繧ｿ繝門�縺ｮ蜍慕判蜀咲函繝懊ち繝ｳ =====
+   蜷�さ繝ｼ繝臥ｴｹ莉九ち繝門�縺ｫ縲∬ｩｲ蠖薙ョ繝｢繧ｷ繝ｼ繝ｳ縺ｸ遘ｻ蜍輔☆繧九�繧ｿ繝ｳ繧帝�鄂ｮ縺吶ｋ縲� */
+.tab-video-link {
+    margin: 6px 0 18px;
+    padding: 12px 14px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+}
+
+.tab-video-link .video-jump-button,
+.tab-video-link button.video-jump-button {
+    width: auto;
+    min-width: 260px;
+    justify-content: center;
+}
+
+@media (max-width: 560px) {
+    .tab-video-link .video-jump-button,
+    .tab-video-link button.video-jump-button {
+        width: 100%;
+        min-width: 0;
+    }
 }
