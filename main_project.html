@@ -1,297 +1,302 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>タートルアドベンチャー - コード紹介</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>タートルアドベンチャー - コード紹介</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="site-header">
-    <h1>タートルアドベンチャー</h1>
-    <h2>コード紹介 / Game Development Portfolio</h2>
-    <nav>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i> Home・他作品</a></li>
-        <li><a href="main_project.html"><i class="fas fa-code"></i> コード紹介ページ</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header">
+<h1>タートルアドベンチャー</h1>
+<h2>コード紹介 / Game Development Portfolio</h2>
+<nav>
+<ul>
+<li><a href="index.html"><i class="fas fa-home"></i> Home・他作品</a></li>
+<li><a href="main_project.html"><i class="fas fa-code"></i> コード紹介ページ</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="portfolio-section project-hero">
+<div class="section-title">
+<span class="section-label">FEATURED PROJECT</span>
+<h2>タートルアドベンチャー</h2>
+</div>
+<div class="project-tech">
+<span>Unity</span>
+<span>C#</span>
+<span>Input System</span>
+<span>CharacterController</span>
+<span>Animator</span>
+<span>NavMeshAgent</span>
+<span>Cinemachine</span>
+<span>状態遷移管理</span>
+<span>セーブ・ロード</span>
+<span>UIフォーカス制御</span>
+<span>Nintendo Switch移植検証</span>
+</div>
+<p class="lead-text">探索・戦闘・ギミック攻略を行う3Dアクションアドベンチャーです。現在はNintendo Switch向けを想定し、入力制御・UI操作・セーブ復帰を中心に改善しています。</p>
+<div class="media-grid">
+<div class="media-card vertical-media">
+<span class="media-label">デモプレイ動画（2026/5/30時点）</span>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM" title="デモプレイ動画" width="560"></iframe>
+</div>
+<div class="media-card wide-media">
+<span class="media-label">Switch版テストプレイ（2025/8/11時点）</span>
+<iframe allow="autoplay" allowfullscreen="" height="315" src="https://www.youtube.com/embed/Kh-J6cAp7Sg?si=3i33ctn1SQk-4mPD" title="Switch版テストプレイ動画" width="560"></iframe>
+</div>
+</div>
+<!-- <div class="button-group">
+<a class="button button-demo" href="main_demo/main_demo.html"><i class="fas fa-gamepad"></i> デモプレイ</a>
+</div> -->
+</section>
+<section class="portfolio-section">
+<div class="section-title">
+<span class="section-label">OVERVIEW</span>
+<h2>プロジェクト概要</h2>
+</div>
 
-  <main>
-    <section class="portfolio-section project-hero">
-      <div class="section-title">
-        <span class="section-label">FEATURED PROJECT</span>
-        <h2>タートルアドベンチャー</h2>
-      </div>
 
-      <div class="project-tech">
-        <span>Unity</span>
-        <span>C#</span>
-        <span>CharacterController</span>
-        <span>Animator</span>
-        <span>NavMeshAgent</span>
-        <span>Cinemachine</span>
-        <span>状態遷移管理</span>
-        <span>敵AI</span>
-        <span>ギミック設計</span>
-        <span>Nintendo Switch移植</span>
-      </div>
 
-      <p class="lead-text">カメ型の主人公を操作し、戦闘アクション・パズル・探索を融合させた3Dステージをクリアしていく、モバイル向けアドベンチャーゲームです。</p>
 
-      <div class="media-grid">
-        <div class="media-card vertical-media">
-          <span class="media-label">スマホ版テストプレイ</span>
-          <iframe src="https://drive.google.com/file/d/1u-rjt0wNkOlFa7R6JG5fqRA9IpbQ6ULI/preview" width="315" height="560" title="スマホ版テストプレイ動画" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="media-card wide-media">
-          <span class="media-label">Switch版テストプレイ</span>
-          <iframe src="https://www.youtube.com/embed/Kh-J6cAp7Sg?si=3i33ctn1SQk-4mPD" width="560" height="315" title="Switch版テストプレイ動画" allow="autoplay" allowfullscreen></iframe>
-        </div>
-      </div>
+<p>現在はSwitch向けを意識し、コントローラー操作、UIフォーカス、ポーズ、セーブポイント復帰などを重点的に改善しています。</p><p>実装では、プレイヤー操作、敵AI、ステージ遷移、セーブ・ロード、UI、サウンド、イベント進行など、ゲームとして必要な基盤を一通り構築しました。</p><p>2023年5月から個人開発を開始し、制作休止期間を除いて累計800時間以上を制作に費やしています。企画、設計、実装、検証、改善まで一人で担当しています。</p><p>本作は、カメ型の主人公を操作してフィールドを探索する3Dアクションアドベンチャーです。戦闘、鍵付き扉、破壊可能オブジェクトなどを組み合わせて進行します。</p><div class="info-grid">
+<div class="info-card">
+<h3><i class="fas fa-lightbulb"></i> 開発目的</h3>
 
-      <div class="button-group">
-        <a href="main_demo/main_demo.html" class="button button-demo"><i class="fas fa-gamepad"></i> デモプレイ</a>
-      </div>
-    </section>
+<p>Unityで3Dアクションゲームを作る実践力を高めるために制作を開始しました。</p><p>操作、敵AI、ギミック、UI、セーブ、サウンドを段階的に実装しています。</p></div>
+<div class="info-card">
+<h3><i class="fas fa-user-cog"></i> 担当範囲</h3>
 
-    <section class="portfolio-section">
-      <div class="section-title">
-        <span class="section-label">OVERVIEW</span>
-        <h2>プロジェクト概要</h2>
-      </div>
-      <p>プレイヤーが片手操作で快適に遊べることを主軸に、アクション・パズル・探索要素を融合させた設計となっています。</p>
-      <p>実装面では、CharacterControllerによるプレイヤー操作、Animatorによる状態遷移、NavMeshを活用した敵AI制御、Cinemachineによるカメラ演出、データ保存機能など、ゲーム開発に必要な主要機能を一通り構築しました。</p>
-      <p>特に、操作性・視認性・没入感に配慮し、ユーザー体験の品質向上を重視した設計を行っています。</p>
-      <p>現在はNintendo Switch向けへの移植にも取り組んでおり、マルチプラットフォームを見据えた設計や、入力デバイス・UXの違いに対応した改善を進めています。</p>
+<p>企画、仕様検討、C#実装、Unity組み込み、UI調整、演出、テストを一人で担当しています。</p><p>一部素材は外部アセットを活用し、ゲーム進行に関わる主要ロジックは自作しています。</p></div>
+<div class="info-card">
+<h3><i class="fas fa-sync-alt"></i> 改善プロセス</h3>
 
-      <div class="info-grid">
-        <div class="info-card">
-          <h3><i class="fas fa-lightbulb"></i> 開発経緯</h3>
-          <p>Unityを用いた実践的なゲーム制作スキルを体系的に習得することを目的に個人開発を開始しました。</p>
-          <p>状態遷移管理、AI、ギミック設計などを段階的に取り入れ、スキルの幅を広げています。</p>
-        </div>
-        <div class="info-card">
-          <h3><i class="fas fa-user-cog"></i> 担当範囲</h3>
-          <p>企画・設計・実装・演出・UI・テスト・公開対応までを一人で担当しています。</p>
-          <p>キャラクターモデルや一部UI素材は外部アセットを活用しています。</p>
-        </div>
-        <div class="info-card">
-          <h3><i class="fas fa-sync-alt"></i> 制作プロセス</h3>
-          <p>2023年5月から開発を開始し、プロトタイプ構築後、ユーザビリティ向上・演出強化・要素拡大を中心に反復的に改善しています。</p>
-        </div>
-      </div>
-    </section>
+<p>最小構成を作成した後、操作感、戦闘、探索、保存処理、UI遷移、演出を追加しました。</p><p>不具合発生時は原因を切り分け、再利用しやすい設計へ見直しています。</p></div>
+</div>
+</section>
+<section class="portfolio-section">
+<div class="section-title">
+<span class="section-label">DEVELOPMENT SCALE</span>
+<h2>開発規模・実装範囲</h2>
+</div>
+<p>単体機能だけでなく、プレイヤー操作・UI・セーブ・シーン遷移を接続している点を重視しています。</p><p>個人開発として、ゲームの基盤機能を一通り実装しています。</p><div class="info-grid">
+<div class="info-card">
+<h3><i class="fas fa-gamepad"></i> プレイヤー制御</h3>
+<p>
+            移動、ジャンプ、通常攻撃、ショット、遠距離攻撃、爆弾設置、ダッシュ、ガード、被ダメージ、
+            ノックバック、撃破、回復、奈落復帰、イベント移動を実装しています。
+          </p>
+</div>
+<div class="info-card">
+<h3><i class="fas fa-route"></i> 進行管理</h3>
+<p>
+            シーン遷移、スポーンポイント復帰、フィールド表示切替、セーブ・ロード、鍵・扉・宝箱などの進行状態保存を実装しています。
+          </p>
+</div>
+<div class="info-card">
+<h3><i class="fas fa-volume-up"></i> UX・演出</h3>
+<p>
+            BGM切替、SE再生、フェード、ポーズメニュー、UIフォーカス、会話中の操作制御など、プレイ体験を支える処理を実装しています。
+          </p>
+</div>
+</div>
+</section>
+<section class="portfolio-section">
+<div class="section-title">
+<span class="section-label">SOURCE CODE</span>
+<h2>GitHubリンク・コード紹介</h2>
+</div>
 
-    <section class="portfolio-section">
-      <div class="section-title">
-        <span class="section-label">SOURCE CODE</span>
-        <h2>GitHubリンク・コード紹介</h2>
-      </div>
-      <p>当ゲームにて作成したコードを、コード公開用リポジトリにまとめています。</p>
-      <p class="note-text">※コード公開用のリポジトリのため、GitHub上ではバージョン管理目的の履歴管理は行っていません。</p>
-      <div class="button-group">
-        <a href="https://github.com/kosuke-Hanchan/KameAdventure" class="button" target="_blank"><i class="fab fa-github"></i> GitHubへ</a>
-      </div>
-    </section>
 
-    <section class="portfolio-section code-showcase">
-      <div class="section-title">
-        <span class="section-label">CODE SHOWCASE</span>
-        <h2>コード紹介（スマホ版）</h2>
-      </div>
+<p class="note-text">※公開用に一部整理して掲載しているため、実プロジェクトの全ファイルや制作履歴をすべて含むものではありません。</p><p>本作で実装した主要スクリプトを、コード確認用のGitHubリポジトリにまとめています。</p><div class="button-group">
+<a class="button" href="https://github.com/kosuke-Hanchan/KameAdventure" target="_blank"><i class="fab fa-github"></i> GitHubへ</a>
+</div>
+</section>
+<section class="portfolio-section code-showcase">
+<div class="section-title">
+<span class="section-label">CODE SHOWCASE</span>
+<h2>一部コード紹介</h2>
+</div>
+<p>中途転職用として、単体機能ではなく「ゲーム全体を成立させる処理」を中心に掲載しています。</p>
+<div class="media-card wide-media code-showcase-video">
+  <span class="media-label">デモプレイ動画</span>
+  <iframe
+    id="codeShowcaseVideo"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen=""
+    frameborder="0"
+    height="315"
+    referrerpolicy="strict-origin-when-cross-origin"
+    src="https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM"
+    title="デモプレイ動画"
+    width="560"></iframe>
+</div>
 
-      <div class="tabs" role="tablist" aria-label="コード紹介カテゴリ">
-        <button class="tab-link active" data-tab="tab1" role="tab" aria-selected="true" aria-controls="tab1"><i class="fas fa-running"></i> プレイヤー操作</button>
-        <button class="tab-link" data-tab="tab2" role="tab" aria-selected="false" aria-controls="tab2"><i class="fas fa-skull"></i> 敵AI</button>
-        <button class="tab-link" data-tab="tab3" role="tab" aria-selected="false" aria-controls="tab3"><i class="fas fa-puzzle-piece"></i> ギミック【1】</button>
-        <button class="tab-link" data-tab="tab4" role="tab" aria-selected="false" aria-controls="tab4"><i class="fas fa-bomb"></i> ギミック【2】</button>
-      </div>
 
-      <div id="tab1" class="tab-content" role="tabpanel">
-        
-<h3>● プレイヤーキャラクターの操作</h3>
-<p>本プロジェクトでは、まずキャラクターの移動システムを構築しました。仮想ジョイスティックによる片手操作をベースとし、ジャンプ・ダッシュ・攻撃などの複数アクションを滑らかに実行できるように設計しています。</p>
-<p>また、状態遷移管理を活用し、各アクションにおける制約（例：攻撃中は移動不可など）を明確化し、プレイヤーの操作ミスを防ぐ工夫も実装しました。</p>
-<p>変数名は現職の名残で「ハンガリアン記法」といった、名前の先頭や末尾に決まった意味の接頭辞や接尾辞を付与する方式を使用しております。</p>
+<div aria-label="コード紹介カテゴリ" class="tabs" role="tablist">
+<button aria-controls="tab1" aria-selected="true" class="tab-link active" data-tab="tab1" role="tab"><i class="fas fa-running"></i> プレイヤー制御</button>
+<button aria-controls="tab2" aria-selected="false" class="tab-link" data-tab="tab2" role="tab"><i class="fas fa-save"></i> セーブ・進行管理</button>
+<button aria-controls="tab3" aria-selected="false" class="tab-link" data-tab="tab3" role="tab"><i class="fas fa-route"></i> フィールド・遷移管理</button>
+<button aria-controls="tab4" aria-selected="false" class="tab-link" data-tab="tab4" role="tab"><i class="fas fa-door-open"></i> バトルルーム管理</button>
+</div>
+
+<div class="tab-content" id="tab1" role="tabpanel">
+<h3>● プレイヤー制御</h3>
+<div class="tab-video-link">
+  <button type="button" class="video-jump-button active" data-video-start="10"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:10）</button>
+</div>
+<p>移動、攻撃、ショット、ガード、爆弾、ダッシュ、被ダメージなど、プレイヤーの基本挙動を管理しています。</p>
+<p>Input System、CharacterController、Animator、当たり判定を連携させ、状態に応じて操作可否を切り替えています。</p>
 <div class="tech-points">
 <p><strong>技術ポイント：</strong></p>
 <ul>
-<li>仮想ジョイスティックによるスムーズな移動・ダッシュなどアクションの実装</li>
-<li>状態遷移（Idle/Move/Jump/Attack...）によるアクション制御</li>
-<li>セッター関数を活用した行動制限とバグ抑制設計</li>
-<li>片手操作に特化したUI・UX設計とアニメーション連携</li>
+<li>PlayerStateによる移動・攻撃・被ダメージ・会話中の状態管理</li>
+<li>ActionTypeによる複数アクションの切替</li>
+<li>ActionMapの有効/無効化による入力制御</li>
+<li>スポーン演出、奈落復帰、セーブ復元との連携</li>
 </ul>
+</div>
+<div class="script-about">
+<p>個人開発では実装速度を優先して一部処理を集約していますが、入力制御・アクション制御・ダメージ制御・復元処理を分割可能な単位として整理しています。</p>
 </div>
 <div class="gist-container">
 <script src="https://gist.github.com/kosuke-Hanchan/495ebefc5b2740320e020990b1892112.js"></script>
 </div>
-<h3>● 片手で可能な操作</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1XW9mEfWmzaH8lrlIPu9UH827J4kEuyNn/preview" title="片手で可能な操作 デモ動画" width="315"></iframe>
-<h3>● 複数のアクションタイプ</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1fJqQZV3MWTHlNmRc0ZiD3gnHO-M3Z7RL/preview" title="複数のアクションタイプ デモ動画" width="315"></iframe>
+</div>
 
-      </div>
-
-      <div id="tab2" class="tab-content hidden" role="tabpanel">
-        
-<h3>● 敵AI</h3>
-<p>敵キャラクターにはNavMeshを活用した経路探索AIを実装し、プレイヤーとの距離・状態に応じて行動パターンを自動遷移するロジックを構築しています。</p>
-<p>行動パターンは「警戒 → 追跡 → 攻撃」のような状態ベースのAIとして制御し、敵ごとに閾値や反応速度に個体差を持たせることでゲームバリエーションを演出しています。</p>
-<p>中ボスでは、乱数による攻撃パターンの分岐や、特定条件下でしかダメージを与えられない仕組みを取り入れることで、戦略性の高いバトル設計を実現しました。</p>
+<div class="tab-content hidden" id="tab2" role="tabpanel">
+<h3>● セーブ・進行管理</h3>
+<div class="tab-video-link">
+  <button type="button" class="video-jump-button" data-video-start="36"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:36）</button>
+</div>
+<p>セーブスロット、現在シーン、スポーン地点、HP、アクションタイプ、各種進行フラグを保存・復元する処理です。</p>
+<p>プレイヤー単体ではなく、扉・宝箱・バトルルームなどの状態を含めて、ゲーム進行を破綻させないことを重視しています。</p>
 <div class="tech-points">
 <p><strong>技術ポイント：</strong></p>
 <ul>
-<li>NavMeshAgentを用いたリアルタイム追跡・経路制御の実装</li>
-<li>状態遷移パターン（巡回・追跡・攻撃・待機）を基にしたAI制御</li>
-<li>個体差パラメータの導入による敵ごとの動作バリエーション</li>
-<li>乱数・攻撃条件・弱点制御を組み合わせた中ボス設計</li>
+<li>セーブデータと実行中データを分けた管理</li>
+<li>最後にいたシーン・スポーン地点・フィールド情報の保存</li>
+<li>HPや選択中アクションタイプの復元</li>
+<li>鍵・扉・宝箱・報酬など、進行状態の保存に対応</li>
 </ul>
 </div>
 <section class="script-section">
-<h3>敵：スケルトン</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1repScKkFcEmoCfxhnzRe7l8nmzqY2hwM/preview" title="敵：スケルトン デモ動画" width="315"></iframe>
+<h4>SaveDataManager_src</h4>
 <div class="script-about">
-<ul>
-<li>NavMeshAgentを利用して経路探索しながらプレイヤーを追跡</li>
-<li>「Idle → 警戒 → 追跡 → 攻撃」へと状態遷移し、反応的なAIを構築</li>
-<li>攻撃範囲や検知範囲を個体ごとにカスタマイズ可能な設計</li>
-</ul>
+<p>セーブスロットの作成・読込・上書きを管理し、ゲーム内の現在状態を保存データへ反映します。</p>
 </div>
-<h4>行動制御スクリプト</h4>
 <div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/8d78670d622d1400bcd3c5746f6dbdad.js"></script>
+<script src="https://gist.github.com/kosuke-Hanchan/9370323aa395b2d3a9197b7b77ad1ed1.js"></script>
 </div>
 </section>
 <section class="script-section">
-<h3>敵：爆弾ガニ(中ボス)</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1yvh1MD6PuwPuL_LpkvuljN0U1JM3R3VL/preview" title="敵：爆弾ガニ（中ボス） デモ動画" width="315"></iframe>
+<h4>SaveData_src</h4>
 <div class="script-about">
-<ul>
-<li>一定間隔でランダムな攻撃パターンを選択するアルゴリズムを導入</li>
-<li>プレイヤーの行動を誘導するような攻撃ロジックを実装</li>
-<li>ダメージ判定はボスの状態に依存し、タイミングを見極める設計</li>
-</ul>
+<p>保存対象となるHP、シーン名、スポーン地点、フィールド情報、進行フラグなどのデータ構造を定義しています。</p>
 </div>
-<h4>行動制御スクリプト</h4>
 <div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/d4f53dd7ab4cfa809f02dcdb94ba4376.js"></script>
-</div>
-<h4><br/>爆弾スクリプト</h4>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/9bf6bd7ce2a8c6b893f502aab1b40a4f.js"></script>
+<script src="https://gist.github.com/kosuke-Hanchan/fdd1ce9b0ccd009e203417617c0ec2cc.js"></script>
 </div>
 </section>
+<section class="script-section">
+<h4>GameStateData_src</h4>
+<div class="script-about">
+<p>シーン間で引き継ぐ現在状態を保持し、ロード後の復元処理と連携させています。</p>
+</div>
+<div class="gist-container">
+<script src="https://gist.github.com/kosuke-Hanchan/a6007ee677999dde6493f4b86880f709.js"></script>
+</div>
+</section>
+</div>
 
-      </div>
-
-      <div id="tab3" class="tab-content hidden" role="tabpanel">
-        
-<h3>● 様々なギミック【1】</h3>
-<p>ギミック系では、「スイッチ」「鍵付き扉」「破壊可能オブジェクト」など、ステージ進行と連動したリアクション処理を設計・実装しました。</p>
-<p>スイッチは攻撃/接触による起動をトリガーとし、「床型」「レバー型」などの種類をenumで定義、また時限式か否かをフラグで制御することで柔軟なレベルデザインを可能にしています。</p>
-<p>鍵付き扉では、取得と消費を一括で管理する鍵管理スクリプトを用意し、開閉条件を一元管理することで複雑なフラグ管理の簡略化を図りました。</p>
+<div class="tab-content hidden" id="tab3" role="tabpanel">
+<h3>● フィールド・遷移管理</h3>
+<div class="tab-video-link">
+  <button type="button" class="video-jump-button" data-video-start="48"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（0:48）</button>
+</div>
+<p>フィールド単位の表示切替、BGM・ライティング・フィールド名表示、シーン遷移、スポーン復帰を管理しています。</p>
+<p>エリア移動時の演出とロード後の復帰地点を連携させ、探索ゲームとして自然に進行できる構成にしています。</p>
 <div class="tech-points">
 <p><strong>技術ポイント：</strong></p>
 <ul>
-<li>列挙型・フラグ管理によるギミックの共通化・汎用化</li>
-<li>トリガーイベントを利用したスイッチ反応処理の実装</li>
-<li>時限スイッチや切替式ギミックのステートマシン制御</li>
-<li>鍵管理スクリプトによる取得・使用の一元制御</li>
+<li>FieldZoneによる表示フィールド・非表示フィールドの制御</li>
+<li>FieldManagerによるフィールド名、BGM、ライティングの切替</li>
+<li>SpawnPointによる復帰位置と向きの管理</li>
+<li>SceneTransitionTriggerによる遷移制御と連続発火防止</li>
 </ul>
 </div>
 <section class="script-section">
-<h3>【スイッチ】</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1ly442pWM5LMIDiHwNpRNNSgQvYIi4Ogz/preview" title="スイッチギミック デモ動画" width="315"></iframe>
-<div class="script-about">
-<ul>
-<li>プレイヤーの攻撃または接触をトリガーとして、扉オブジェクトの開閉アニメーションを実行</li>
-<li>「床タイプ」「レバータイプ」のスイッチ種別を列挙型で指定し、設計時に柔軟な切替が可能</li>
-<li>フラグ設定により、一定時間で自動的にオフとなる「時限スイッチ」としての挙動も実現</li>
-</ul>
-</div>
+<h4>FieldZone_src</h4>
 <div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/2003535e7ad6ac134d389311681ec900.js"></script>
+<script src="https://gist.github.com/kosuke-Hanchan/32e5e181c743a440bb40c0b5245647ed.js"></script>
 </div>
 </section>
 <section class="script-section">
-<h3>【鍵付き扉】</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1FoOkdarxzciSwsW-sFXRF8pDxn6vVOX1/preview" title="鍵付き扉ギミック デモ動画" width="315"></iframe>
-<div class="script-about">
-<ul>
-<li>通常用／ボス用などの鍵タイプを変数で指定し、対応する扉の開閉ロジックを分岐</li>
-<li>鍵取得および消費を一元的に管理する専用スクリプトを設計し、処理の簡素化と保守性を向上</li>
-</ul>
-</div>
-<h4>鍵の管理スクリプト</h4>
+<h4>FieldManager_src</h4>
 <div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/9b316096d759d72dc9221f85281b774d.js"></script>
-</div>
-<h4><br/>鍵取得リアクション用スクリプト</h4>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/a01fbe3b2443299dc812c5b06a17723c.js"></script>
-</div>
-<h4><br/>鍵付き扉開錠リアクション用スクリプト</h4>
-<div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/5b82d48e7db2fb2078641ace3dca8e63.js"></script>
+<script src="https://gist.github.com/kosuke-Hanchan/54d6e8a14a73df8c7d20e41dca78a74e.js"></script>
 </div>
 </section>
+<section class="script-section">
+<h4>SpawnPoint_src</h4>
+<div class="gist-container">
+<script src="https://gist.github.com/kosuke-Hanchan/b60ccf332492afcbd3565d08f8b3c9be.js"></script>
+</div>
+</section>
+<section class="script-section">
+<h4>SceneTransitionTrigger_src</h4>
+<div class="gist-container">
+<script src="https://gist.github.com/kosuke-Hanchan/ff67c37fe6134ecac6069d778a1e2803.js"></script>
+</div>
+</section>
+</div>
 
-      </div>
-
-      <div id="tab4" class="tab-content hidden" role="tabpanel">
-        
-<h3>● 様々なギミック【2】</h3>
-<p>ギミック【2】では、「破壊可能な岩」「アイテム入り樽」など、攻撃やスキルによって破壊できるオブジェクトを設計・実装しました。破壊演出をステージ進行や探索と結びつけることで、プレイヤーの行動に意味を持たせています。</p>
-<p>破壊オブジェクトは、攻撃・爆弾といったトリガーの種類や、破壊時に再生するアニメーションをオブジェクト単位で設定できる構成にし、汎用的に再利用できるようにしました。</p>
-<p>アイテム入り樽では、ドロップするアイテムの種類や出現確率をパラメータとして外部から調整可能にし、レベルデザイン側で報酬バランスを柔軟に制御できる設計としています。</p>
+<div class="tab-content hidden" id="tab4" role="tabpanel">
+<h3>● バトルルーム管理</h3>
+<div class="tab-video-link">
+  <button type="button" class="video-jump-button" data-video-start="92"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（1:32）</button>
+</div>
+<p>バトルルームへの侵入、敵撃破判定、クリア後の報酬出現、クリア状態の保存を管理しています。</p>
+<p>戦闘・報酬・セーブ状態を一連の流れとして接続し、再訪時に同じ報酬が重複しないようにしています。</p>
 <div class="tech-points">
 <p><strong>技術ポイント：</strong></p>
 <ul>
-<li>爆弾・攻撃トリガーによるオブジェクト破壊アニメーションの実装</li>
-<li>ゲーム進行に応じた破壊オブジェクトの配置・調整設計</li>
-<li>ドロップアイテムの種類・確率を設定可能なパラメータ設計</li>
-<li>オブジェクト毎に異なるリアクション・生成物設定の実現</li>
+<li>部屋単位での戦闘開始・クリア判定</li>
+<li>敵撃破状態の監視と報酬出現処理</li>
+<li>報酬取得・部屋クリア状態の保存連携</li>
+<li>再訪時の状態復元による重複報酬防止</li>
 </ul>
 </div>
 <section class="script-section">
-<h3>【破壊可能な岩】</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1FD3wlRdNPRCzGpB7TFWRj61_DkDP1ml7/preview" title="破壊可能な岩ギミック デモ動画" width="315"></iframe>
-<div class="script-about">
-<ul>
-<li>プレイヤーの爆弾スキルによる破壊処理とアニメーション再生を組み合わせたギミック演出</li>
-<li>ゲームの進行度に応じて、破壊が探索・移動の鍵となる構成でステージ設計に活用</li>
-</ul>
-</div>
+<h4>BattleRoomTrigger</h4>
 <div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/49d0cc6ce59b40f5a78d9497dc611607.js"></script>
+<script src="https://gist.github.com/kosuke-Hanchan/372265ca56245e13a2b1e073ec89e583.js"></script>
 </div>
 </section>
 <section class="script-section">
-<h3>【アイテム入り樽】</h3>
-<iframe allow="autoplay" allowfullscreen="" height="560" src="https://drive.google.com/file/d/1sEto6NjWMMqK_799OL8xCOsXj5uJTtmg/preview" title="アイテム入り樽ギミック デモ動画" width="315"></iframe>
-<div class="script-about">
-<ul>
-<li>攻撃により破壊可能なオブジェクトとして設計し、破壊時に報酬アイテムを出現</li>
-<li>アイテムの種類やドロップ確率をオブジェクト単位で設定可能にし、多様なプレイ体験を提供</li>
-</ul>
-</div>
+<h4>EnemyDefeatRewardManager</h4>
 <div class="gist-container">
-<script src="https://gist.github.com/kosuke-Hanchan/235223b9c8197e655ae14f1cf5d4645a.js"></script>
+<script src="https://gist.github.com/kosuke-Hanchan/182f59eece5b309aa2007db63207ca5e.js"></script>
 </div>
 </section>
+</div>
+</section>
+<section class="portfolio-section">
+<div class="section-title">
+<span class="section-label">FOR RECRUITERS</span>
+<h2>中途採用向けに伝えたいこと</h2>
+</div>
 
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2024&ndash;2026 半田 滉介 - Portfolio</p>
-  </footer>
-
-  <script>
+</section>
+</main>
+<footer>
+<p>© 2024–2026 半田 滉介 - Portfolio</p>
+</footer>
+<script>
     document.querySelectorAll('.tab-link').forEach(tab => {
       tab.addEventListener('click', function() {
         const target = this.getAttribute('data-tab');
@@ -303,6 +308,27 @@
         this.classList.add('active');
         this.setAttribute('aria-selected', 'true');
         document.getElementById(target).classList.remove('hidden');
+      });
+    });
+
+    // デモ動画を指定秒数から再生する。
+    const codeShowcaseVideo = document.getElementById('codeShowcaseVideo');
+    const videoBaseUrl = 'https://www.youtube.com/embed/DWQDd3klh6c?si=_yxN6ClBhJO10PiM';
+
+    document.querySelectorAll('.video-jump-button').forEach(button => {
+      button.addEventListener('click', function() {
+        const startSeconds = Number(this.dataset.videoStart || 0);
+        document.querySelectorAll('.video-jump-button').forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+        codeShowcaseVideo.src = `${videoBaseUrl}&start=${startSeconds}&autoplay=1`;
+
+        const videoSection = codeShowcaseVideo.closest('.code-showcase-video');
+        if (videoSection != null) {
+          videoSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        }
       });
     });
   </script>
