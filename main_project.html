@@ -223,16 +223,17 @@
             <li>PlayerStateによる移動・攻撃・被ダメージ・会話中の状態管理</li>
             <li>ActionTypeによる複数アクションの切替</li>
             <li>ActionMapの有効/無効化による入力制御</li>
-            <li>スポーン演出、奈落復帰、セーブ復元との連携</li>
+            <li>奈落復帰</li>
           </ul>
         </div>
         <div class="script-about">
           <p>
-            個人開発のため実装効率も考慮しつつ、入力制御・アクション制御・ダメージ制御・復元処理を役割ごとに切り分け、後から拡張・分離しやすい構成を意識しています。
+            入力制御・アクション制御・ダメージ制御・復元処理を役割ごとに切り分け、後から拡張・分離しやすい構成を意識しています。
           </p>
-          <p><strong>課題：</strong>複数アクションやイベント中の操作制限が増えると、入力受付と状態遷移が衝突しやすくなります。</p>
-          <p><strong>対応：</strong>PlayerStateとActionTypeで状態を分け、入力、アニメーション、当たり判定、復帰処理を状態に応じて制御しています。</p>
-          <p><strong>結果：</strong>探索、戦闘、会話、セーブ復帰など、場面ごとに必要な操作だけを受け付ける構成にしています。</p>
+          <p><strong>課題：</strong>移動や攻撃、被ダメージなど複数の状態を実装する中で、攻撃中に別の操作が入力されるなど、意図しない状態遷移が発生する可能性がありました。</p>
+          <p><strong>対応：</strong>そこで、プレイヤーの行動状態を管理するPlayerStateと、使用するアクションの種類を管理するActionTypeを分けて設計しました。<br>
+            例えば、攻撃中は移動や他の攻撃を受け付けないようにするなど、現在の状態に応じて実行できる操作を制限しています。</p>
+          <p><strong>結果：</strong>複数のアクションが競合することを防ぎ、プレイヤーが意図しない動作を起こしにくい、安定した操作を実現しています。</p>
         </div>
         <div class="gist-container">
           <script src="https://gist.github.com/kosuke-Hanchan/495ebefc5b2740320e020990b1892112.js"></script>
@@ -259,15 +260,15 @@
           </ul>
         </div>
         <div class="script-about">
-          <p><strong>課題：</strong>セーブ復帰時に、プレイヤー位置だけでなく扉・宝箱・バトルルームなどの進行状態も一致させる必要がありました。</p>
-          <p><strong>対応：</strong>保存データと実行中データを分け、現在シーン、スポーン地点、フィールド情報、進行フラグを復元対象として整理しました。</p>
-          <p><strong>結果：</strong>ロード後も探索状況が破綻しにくく、ゲーム進行を継続できる構成にしています。</p>
+          <p><strong>課題：</strong>セーブデータから再開する際、再開地点と、扉の開錠・宝箱の開封・バトルルームのクリア状況を整合させる必要がありました。</p>
+          <p><strong>対応：</strong>進行状況はメモリ上で更新し、セーブ時にまとめてファイルへ書き出す構成にしました。</p>
+          <p><strong>結果：</strong>ロード後も扉や宝箱、バトルルームの状態を引き継ぎ、セーブ時点の探索状況からゲームを再開できるようにしました。</p>
         </div>
 
         <section class="script-section">
           <h4>SaveDataManager_src</h4>
           <div class="script-about">
-            <p>セーブスロットの作成・読込・上書きを管理し、ゲーム内の現在状態を保存データへ反映します。</p>
+            <p>セーブスロットの作成・読み込み・保存・削除と、Easy Save 3によるファイルへの読み書きを担当します。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/9370323aa395b2d3a9197b7b77ad1ed1.js"></script>
@@ -277,7 +278,7 @@
         <section class="script-section">
           <h4>SaveData_src</h4>
           <div class="script-about">
-            <p>保存対象となるHP、シーン名、スポーン地点、フィールド情報、進行フラグなどのデータ構造を定義しています。</p>
+            <p>1スロット分の保存データを定義するクラスです。HP、シーン名、スポーン地点ID、フィールド表示名、所持アイテム、扉や宝箱などの進行状態を保持します。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/fdd1ce9b0ccd009e203417617c0ec2cc.js"></script>
@@ -287,7 +288,7 @@
         <section class="script-section">
           <h4>GameStateData_src</h4>
           <div class="script-about">
-            <p>シーン間で引き継ぐ現在状態を保持し、ロード後の復元処理と連携させています。</p>
+            <p>HP・プレイ時間・選択中のアクション・復帰地点など、シーンをまたいで必要な実行中の情報を保持します。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/a6007ee677999dde6493f4b86880f709.js"></script>
@@ -311,19 +312,21 @@
             <li>FieldZoneによる表示フィールド・非表示フィールドの制御</li>
             <li>FieldManagerによるフィールド名、BGM、ライティングの切替</li>
             <li>SpawnPointによる復帰位置と向きの管理</li>
-            <li>SceneTransitionTriggerによる遷移制御と連続発火防止</li>
           </ul>
         </div>
         <div class="script-about">
-          <p><strong>課題：</strong>エリア移動、シーン遷移、ロード復帰が別々に動くと、表示フィールドやBGM、復帰地点がずれる可能性があります。</p>
-          <p><strong>対応：</strong>FieldZone、FieldManager、SpawnPoint、SceneTransitionTriggerを連携させ、移動先に必要な情報を一貫して扱うようにしています。</p>
-          <p><strong>結果：</strong>探索中のフィールド切替とシーン遷移後の復帰を自然につなげ、再開時の違和感を抑えています。</p>
+          <p><strong>課題：</strong>エリア移動・シーン遷移・ロード復帰のそれぞれで、プレイヤーの配置先とフィールド名・BGMを一致させる必要がありました。
+            <br>特に復帰時は、エリアへの進入判定だけに頼らず、配置先のフィールド情報を反映する必要がありました。</p>
+          <p><strong>対応：</strong>通常のエリア移動では、FieldZoneからFieldManagerへ通知し、フィールド名やBGMを切り替えます。
+            <br>シーン遷移・ロード復帰では、PlayerSpawnerがSpawnPointをもとにプレイヤーを配置し、その地点に紐づくFieldZoneの情報を明示的に適用する構成にしました。</p>
+          <p><strong>結果：</strong>復帰時にもエリアへの進入判定に頼らず、配置先に対応したフィールド名やBGMを適用できるようにしました。
+            <br>通常の探索と復帰時で、共通のフィールド切り替え処理を使う構成にしています。</p>
         </div>
 
         <section class="script-section">
           <h4>FieldZone_src</h4>
           <div class="script-about">
-            <p>フィールド単位で表示・非表示を切り替え、探索範囲の管理と負荷軽減を両立するための処理です。</p>
+            <p>プレイヤーのエリア進入を検知し、FieldManager_srcへフィールドの切り替えを通知します。あわせて、指定オブジェクトの表示・非表示や霧の演出を制御します。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/32e5e181c743a440bb40c0b5245647ed.js"></script>
@@ -333,7 +336,7 @@
         <section class="script-section">
           <h4>FieldManager_src</h4>
           <div class="script-about">
-            <p>現在のフィールドに応じて、フィールド名表示、BGM、ライティングを切り替える管理処理です。</p>
+            <p>現在のフィールドIDを管理し、フィールド名表示・BGM・ライティングを切り替えます。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/54d6e8a14a73df8c7d20e41dca78a74e.js"></script>
@@ -343,7 +346,7 @@
         <section class="script-section">
           <h4>SpawnPoint_src</h4>
           <div class="script-about">
-            <p>シーン遷移やロード後の復帰位置と向きを管理し、必要に応じてスポーン演出移動を行います。</p>
+            <p>プレイヤーの出現位置と向き、地点を識別するID、対応する移動元シーンを設定するスクリプトです。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/b60ccf332492afcbd3565d08f8b3c9be.js"></script>
@@ -353,7 +356,7 @@
         <section class="script-section">
           <h4>SceneTransitionTrigger_src</h4>
           <div class="script-about">
-            <p>シーン遷移時のフェード、遷移先、スポーン地点を連携し、連続発火を防ぎながら移動処理を行います。</p>
+            <p>プレイヤーの進入を検知し、遷移先のシーン名とスポーン地点IDをSceneTransitionManager_srcへ渡します。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/ff67c37fe6134ecac6069d778a1e2803.js"></script>
@@ -367,7 +370,7 @@
           <button type="button" class="video-jump-button" data-video-start="92"><i class="fas fa-play-circle"></i> デモ動画の該当シーンを再生（1:32）</button>
         </div>
         <p>
-          バトルルームへの侵入、敵撃破判定、クリア後の報酬出現、クリア状態の保存を管理しています。
+          バトルルームへの侵入、敵出現、敵撃破判定、クリア後の報酬出現を管理しています。
         <br />
           戦闘・報酬・セーブ状態を一連の流れとして接続し、再訪時に同じ報酬が重複しないようにしています。
         </p>
@@ -376,20 +379,20 @@
           <ul>
             <li>部屋単位での戦闘開始・クリア判定</li>
             <li>敵撃破状態の監視と報酬出現処理</li>
-            <li>報酬取得・部屋クリア状態の保存連携</li>
-            <li>再訪時の状態復元による重複報酬防止</li>
           </ul>
         </div>
         <div class="script-about">
-          <p><strong>課題：</strong>戦闘クリア後に報酬が重複出現したり、再訪時にクリア済み状態が戻らないと進行管理が破綻します。</p>
-          <p><strong>対応：</strong>バトルルーム単位でクリア状態と報酬状態を管理し、セーブデータと連携して復元できるようにしています。</p>
-          <p><strong>結果：</strong>戦闘、報酬、保存状態を一連の流れとして扱い、再訪時も自然な状態を維持できるようにしています。</p>
+          <p><strong>課題：</strong>バトルルームごとに敵の数や報酬を変える際、コードを修正せずに調整できる仕組みが必要でした。</p>
+          <p><strong>対応：</strong>出現させる敵オブジェクトや報酬をInspectorから設定できる構成にしました。
+            <br>部屋ごとに敵の数や組み合わせ、報酬内容を変更できるようにしています。</p>
+          <p><strong>結果：</strong>共通の処理を使いながら、戦闘規模や報酬の異なるバトルルームを作成・調整できるようにしました。</p>
         </div>
 
         <section class="script-section">
           <h4>BattleRoomTrigger</h4>
           <div class="script-about">
-            <p>バトルルームへの侵入判定、戦闘開始、部屋の封鎖・解放、クリア状態の保存連携を管理します。</p>
+            <p>プレイヤーの入場を検知し、Inspectorで指定した敵の出現と、扉の封鎖などの開始処理を実行します。
+              <br>部屋ごとに出現させる敵の数や組み合わせを設定でき、報酬処理が完了した部屋では戦闘の再発を防ぎます。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/372265ca56245e13a2b1e073ec89e583.js"></script>
@@ -399,7 +402,7 @@
         <section class="script-section">
           <h4>EnemyDefeatRewardManager</h4>
           <div class="script-about">
-            <p>敵の撃破状態を監視し、全敵撃破後の報酬出現、取得状態、再訪時の復元処理を管理します。</p>
+            <p>敵からの撃破通知を数え、指定数に達すると扉の開放やアイテムの出現などの報酬処理を実行します。</p>
           </div>
           <div class="gist-container">
             <script src="https://gist.github.com/kosuke-Hanchan/182f59eece5b309aa2007db63207ca5e.js"></script>
